@@ -18,7 +18,7 @@
   --ff-display:'Playfair Display',Georgia,serif;
   --ff-body:'Outfit',system-ui,sans-serif;
   --max:1140px; --r:10px;
-  --nav-h:68px;
+  --nav-h:60px;
 }
 html{scroll-behavior:smooth}
 body{font-family:var(--ff-body);color:var(--body);background:var(--white);line-height:1.6;overflow-x:hidden}
@@ -26,9 +26,9 @@ body{font-family:var(--ff-body);color:var(--body);background:var(--white);line-h
 /* ── CANDIDATE BANNER ── */
 .cand-banner{background:var(--ink);padding:.65rem 2rem}
 .cand-inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
-.cand-banner p{color:rgba(255,255,255,.5);font-size:.8rem}
+.cand-banner p{color:rgba(255,255,255,.78);font-size:.88rem}
 .cand-banner strong{color:rgba(255,255,255,.8)}
-.cand-link{font-size:.78rem;color:var(--gold);font-weight:500;text-decoration:none;border:1px solid rgba(201,168,76,.35);padding:4px 12px;border-radius:4px;transition:all .2s;white-space:nowrap}
+.cand-link{font-size:.85rem;color:var(--gold);font-weight:500;text-decoration:none;border:1px solid rgba(201,168,76,.35);padding:4px 12px;border-radius:4px;transition:all .2s;white-space:nowrap}
 .cand-link:hover{background:var(--gold);color:var(--dark)}
 
 /* ── NAV ── */
@@ -55,20 +55,26 @@ nav{
   transition:border-color .2s
 }
 .nav-phone:hover{border-color:var(--burg)}
-.nav-phone::before{content:'📞';font-size:.8rem}
-.nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none}
-.nav-links a{color:rgba(255,255,255,.65);text-decoration:none;font-size:.85rem;font-weight:400;transition:color .2s}
+.nav-phone::before{content:'📞';font-size:.88rem}
+.nav-links{display:flex;align-items:center;gap:1.1rem;list-style:none}
+.nav-links a{color:rgba(255,255,255,.65);text-decoration:none;font-size:.92rem;font-weight:400;transition:color .2s}
 .nav-links a:hover{color:var(--white)}
-.nav-right{display:flex;align-items:center;gap:.75rem}
+.nav-right{display:flex;align-items:center;gap:.6rem}
 .lang-btn{
-  background:none;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.55);
-  font-size:.75rem;font-weight:500;padding:4px 10px;border-radius:4px;
+  background:none;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.82);
+  font-size:.8rem;font-weight:500;padding:4px 10px;border-radius:4px;
   cursor:pointer;font-family:var(--ff-body);transition:all .2s;letter-spacing:.3px
 }
 .lang-btn:hover{border-color:var(--gold);color:var(--gold)}
+.nav-candidate{
+  font-size:.85rem;color:var(--gold);font-weight:500;text-decoration:none;
+  border:1px solid rgba(201,168,76,.35);padding:5px 12px;border-radius:4px;
+  transition:all .2s;white-space:nowrap
+}
+.nav-candidate:hover{background:var(--gold);color:var(--dark)}
 .nav-cta{
   background:var(--burg);color:var(--white);border:none;
-  font-size:.85rem;font-weight:600;padding:8px 20px;border-radius:6px;
+  font-size:.92rem;font-weight:600;padding:8px 20px;border-radius:6px;
   cursor:pointer;font-family:var(--ff-body);text-decoration:none;
   transition:background .2s;white-space:nowrap
 }
@@ -76,7 +82,7 @@ nav{
 
 /* ── HERO ── */
 .hero{
-  min-height:100vh;padding:calc(var(--nav-h) + 5rem) 2rem 5rem;
+  min-height:100vh;padding:calc(var(--nav-h) + .75rem) 2rem 4rem;
   background:var(--dark);position:relative;overflow:hidden;
   display:flex;align-items:center
 }
@@ -94,11 +100,11 @@ nav{
     linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);
   background-size:60px 60px;
 }
-.hero-inner{max-width:var(--max);margin:0 auto;position:relative;z-index:1;width:100%;display:grid;grid-template-columns:1fr 420px;gap:4rem;align-items:center}
+.hero-inner{max-width:800px;margin:0 auto;position:relative;z-index:1;width:100%}
 .hero-eyebrow{
   display:inline-flex;align-items:center;gap:8px;
   background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.3);
-  color:var(--gold);font-size:.75rem;font-weight:500;letter-spacing:.8px;text-transform:uppercase;
+  color:var(--gold);font-size:.8rem;font-weight:500;letter-spacing:.8px;text-transform:uppercase;
   padding:5px 14px;border-radius:20px;margin-bottom:1.5rem
 }
 .hero h1{
@@ -106,7 +112,7 @@ nav{
   color:var(--white);line-height:1.1;font-weight:400;margin-bottom:1.25rem
 }
 .hero h1 em{color:var(--gold);font-style:italic;display:block}
-.hero-sub{font-size:1rem;color:rgba(255,255,255,.55);line-height:1.75;max-width:500px;margin-bottom:2rem}
+.hero-sub{font-size:1.05rem;color:rgba(255,255,255,.82);line-height:1.75;max-width:500px;margin-bottom:2rem}
 .hero-actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:3rem}
 .btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;border-radius:7px;font-weight:600;font-size:.9rem;cursor:pointer;transition:all .2s;border:none;padding:13px 24px;font-family:var(--ff-body)}
 .btn-primary{background:var(--burg);color:var(--white)}
@@ -116,7 +122,7 @@ nav{
 .hero-stats{display:flex;gap:2.5rem}
 .hstat{border-left:2px solid var(--burg);padding-left:1rem}
 .hstat-n{font-family:var(--ff-display);font-size:2rem;color:var(--white);line-height:1;display:block;font-weight:400}
-.hstat-l{font-size:.72rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.5px;margin-top:3px;display:block}
+.hstat-l{font-size:.78rem;color:rgba(255,255,255,.72);text-transform:uppercase;letter-spacing:.5px;margin-top:3px;display:block}
 
 /* Contact card in hero */
 .hero-contact-card{
@@ -124,31 +130,31 @@ nav{
   border-radius:14px;padding:2rem;
   backdrop-filter:blur(8px);
 }
-.hcc-label{font-size:.7rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem}
+.hcc-label{font-size:.76rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem}
 .hcc-person{display:flex;align-items:flex-start;gap:.85rem;margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid rgba(255,255,255,.07)}
 .hcc-avatar{
   width:44px;height:44px;border-radius:50%;
   background:var(--burg);color:var(--white);
-  font-size:.85rem;font-weight:600;
+  font-size:.92rem;font-weight:600;
   display:flex;align-items:center;justify-content:center;flex-shrink:0;
   font-family:var(--ff-display);letter-spacing:-.5px
 }
 .hcc-name{font-size:.95rem;font-weight:600;color:var(--white);margin-bottom:2px}
-.hcc-role{font-size:.78rem;color:rgba(255,255,255,.45)}
+.hcc-role{font-size:.85rem;color:rgba(255,255,255,.78)}
 .hcc-contacts{display:flex;flex-direction:column;gap:.6rem}
 .hcc-row{display:flex;align-items:center;gap:.6rem}
 .hcc-icon{font-size:.9rem;width:20px;text-align:center;flex-shrink:0}
-.hcc-val{font-size:.88rem;color:rgba(255,255,255,.7);text-decoration:none;transition:color .2s}
+.hcc-val{font-size:.95rem;color:rgba(255,255,255,.7);text-decoration:none;transition:color .2s}
 .hcc-val:hover{color:var(--gold)}
-.hcc-cta{display:block;margin-top:1.25rem;background:var(--burg);color:var(--white);text-align:center;border-radius:7px;padding:.75rem;font-weight:600;font-size:.88rem;text-decoration:none;transition:background .2s}
+.hcc-cta{display:block;margin-top:1.25rem;background:var(--burg);color:var(--white);text-align:center;border-radius:7px;padding:.75rem;font-weight:600;font-size:.95rem;text-decoration:none;transition:background .2s}
 .hcc-cta:hover{background:var(--crim)}
 
 /* ── SECTION COMMON ── */
 section{padding:5.5rem 2rem}
 .container{max-width:var(--max);margin:0 auto}
-.sec-label{font-size:.72rem;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--burg);margin-bottom:.65rem;display:block}
+.sec-label{font-size:.78rem;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--burg);margin-bottom:.65rem;display:block}
 .sec-title{font-family:var(--ff-display);font-size:clamp(1.9rem,3.2vw,2.7rem);color:var(--dark);line-height:1.15;margin-bottom:1rem;font-weight:400}
-.sec-sub{font-size:1rem;color:var(--muted);line-height:1.75;max-width:580px}
+.sec-sub{font-size:1.05rem;color:var(--muted);line-height:1.75;max-width:580px}
 
 /* ── PROBLEM ── */
 .problem{background:var(--offwh);border-top:1px solid var(--divider)}
@@ -158,7 +164,7 @@ section{padding:5.5rem 2rem}
 .prob-card:hover{box-shadow:0 6px 24px rgba(139,26,58,.1)}
 .prob-num{font-family:var(--ff-display);font-size:2.8rem;color:var(--dark);line-height:1;margin-bottom:.6rem;font-weight:400}
 .prob-label{font-size:.95rem;font-weight:600;color:var(--dark);margin-bottom:.4rem}
-.prob-text{font-size:.85rem;color:var(--muted);line-height:1.6}
+.prob-text{font-size:.92rem;color:var(--muted);line-height:1.6}
 
 /* ── SOLUTION / SERVICES ── */
 .solution{background:var(--white)}
@@ -172,8 +178,8 @@ section{padding:5.5rem 2rem}
 .sol-card:hover{border-color:var(--burg);background:var(--white);box-shadow:0 4px 16px rgba(139,26,58,.07)}
 .sol-num{font-family:var(--ff-display);font-size:1.8rem;color:var(--divider);line-height:1;flex-shrink:0;font-weight:400;transition:color .2s}
 .sol-card:hover .sol-num{color:var(--burg)}
-.sol-title{font-size:1rem;font-weight:600;color:var(--dark);margin-bottom:.35rem}
-.sol-text{font-size:.875rem;color:var(--muted);line-height:1.6}
+.sol-title{font-size:1.05rem;font-weight:600;color:var(--dark);margin-bottom:.35rem}
+.sol-text{font-size:.95rem;color:var(--muted);line-height:1.6}
 
 /* Quote panel */
 .quote-panel{
@@ -185,16 +191,16 @@ section{padding:5.5rem 2rem}
   position:absolute;top:-1.5rem;left:1.5rem;line-height:1
 }
 .qp-text{font-family:var(--ff-display);font-size:1.15rem;color:var(--white);line-height:1.7;font-style:italic;position:relative;z-index:1;margin-bottom:1.5rem}
-.qp-author{font-size:.82rem;color:rgba(255,255,255,.45);font-weight:500}
+.qp-author{font-size:.9rem;color:rgba(255,255,255,.78);font-weight:500}
 .qp-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.08)}
 .qps{text-align:center}
 .qps-n{font-family:var(--ff-display);font-size:1.8rem;color:var(--gold);display:block;font-weight:400}
-.qps-l{font-size:.72rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.4px}
+.qps-l{font-size:.78rem;color:rgba(255,255,255,.72);text-transform:uppercase;letter-spacing:.4px}
 
 /* ── PROCESS ── */
 .process{background:var(--dark)}
 .process .sec-title{color:var(--white)}
-.process .sec-sub{color:rgba(255,255,255,.5)}
+.process .sec-sub{color:rgba(255,255,255,.78)}
 .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:3rem;background:rgba(255,255,255,.06);border-radius:var(--r);overflow:hidden}
 .step-cell{background:var(--dark);padding:1.75rem;position:relative;transition:background .2s}
 .step-cell:hover{background:#140820}
@@ -204,8 +210,8 @@ section{padding:5.5rem 2rem}
   display:flex;align-items:center;justify-content:center;margin-bottom:1rem
 }
 .step-title{font-size:.95rem;font-weight:600;color:var(--white);margin-bottom:.4rem}
-.step-text{font-size:.82rem;color:rgba(255,255,255,.45);line-height:1.6}
-.step-dur{font-size:.75rem;color:var(--gold);margin-top:.6rem;font-weight:500}
+.step-text{font-size:.9rem;color:rgba(255,255,255,.78);line-height:1.6}
+.step-dur{font-size:.8rem;color:var(--gold);margin-top:.6rem;font-weight:500}
 
 /* ── ROI CALCULATOR ── */
 .roi{background:var(--offwh);border-top:1px solid var(--divider)}
@@ -213,7 +219,7 @@ section{padding:5.5rem 2rem}
 .roi-controls{}
 .roi-control{margin-bottom:1.75rem}
 .roi-control label{display:flex;justify-content:space-between;align-items:center;margin-bottom:.75rem}
-.rc-name{font-size:.88rem;font-weight:600;color:var(--dark)}
+.rc-name{font-size:.95rem;font-weight:600;color:var(--dark)}
 .rc-val{font-family:var(--ff-display);font-size:1.1rem;color:var(--burg);font-weight:400}
 input[type=range]{
   width:100%;-webkit-appearance:none;appearance:none;
@@ -230,20 +236,20 @@ input[type=range]::-moz-range-thumb{
   width:20px;height:20px;border-radius:50%;
   background:var(--burg);cursor:pointer;border:3px solid var(--white)
 }
-.roi-note{font-size:.78rem;color:var(--muted);margin-top:.4rem}
+.roi-note{font-size:.85rem;color:var(--muted);margin-top:.4rem}
 
 .roi-results{display:flex;flex-direction:column;gap:1rem}
 .roi-card{border-radius:var(--r);padding:1.5rem;transition:transform .15s}
 .roi-card:hover{transform:translateY(-2px)}
 .roi-card.alt{background:var(--white);border:1px solid var(--divider)}
 .roi-card.saving{background:var(--green);border:1px solid var(--green)}
-.roi-badge{font-size:.7rem;font-weight:600;letter-spacing:.6px;text-transform:uppercase;margin-bottom:.6rem;display:block}
+.roi-badge{font-size:.76rem;font-weight:600;letter-spacing:.6px;text-transform:uppercase;margin-bottom:.6rem;display:block}
 .roi-card.alt .roi-badge{color:var(--muted)}
 .roi-card.saving .roi-badge{color:rgba(255,255,255,.65)}
 .roi-amount{font-family:var(--ff-display);font-size:2.2rem;font-weight:400;line-height:1;margin-bottom:.4rem;display:block}
 .roi-card.alt .roi-amount{color:var(--dark)}
 .roi-card.saving .roi-amount{color:#7FFFC4}
-.roi-desc{font-size:.82rem}
+.roi-desc{font-size:.9rem}
 .roi-card.alt .roi-desc{color:var(--muted)}
 .roi-card.saving .roi-desc{color:rgba(255,255,255,.65)}
 .roi-divider{height:1px;background:var(--divider);margin:.25rem 0}
@@ -256,8 +262,8 @@ input[type=range]::-moz-range-thumb{
 .why-card:hover::after{transform:scaleX(1)}
 .why-card:hover{border-color:var(--burg);box-shadow:0 4px 20px rgba(139,26,58,.08)}
 .why-icon{font-size:1.5rem;margin-bottom:1rem;display:block}
-.why-title{font-size:1rem;font-weight:600;color:var(--dark);margin-bottom:.4rem}
-.why-text{font-size:.855rem;color:var(--muted);line-height:1.65}
+.why-title{font-size:1.05rem;font-weight:600;color:var(--dark);margin-bottom:.4rem}
+.why-text{font-size:.95rem;color:var(--muted);line-height:1.65}
 
 /* ── CANDIDATES TABLE ── */
 .candidates{background:var(--offwh);border-top:1px solid var(--divider)}
@@ -265,17 +271,17 @@ input[type=range]::-moz-range-thumb{
 .cand-table-wrap{overflow:hidden;border-radius:var(--r);border:1px solid var(--divider)}
 table{width:100%;border-collapse:collapse}
 thead{background:var(--dark)}
-th{text-align:left;font-size:.75rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:rgba(255,255,255,.6);padding:.9rem 1.25rem}
-td{padding:.85rem 1.25rem;border-bottom:1px solid var(--divider);font-size:.875rem;color:var(--body);vertical-align:top;background:var(--white)}
+th{text-align:left;font-size:.8rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:rgba(255,255,255,.6);padding:.9rem 1.25rem}
+td{padding:.85rem 1.25rem;border-bottom:1px solid var(--divider);font-size:.95rem;color:var(--body);vertical-align:top;background:var(--white)}
 tr:last-child td{border-bottom:none}
 tr:hover td{background:var(--offwh)}
 .good{color:var(--green);font-weight:600}
 .legal-panel{background:var(--dark);border-radius:var(--r);padding:1.75rem;position:sticky;top:calc(var(--nav-h) + 1rem)}
-.lp-title{font-size:.78rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem}
+.lp-title{font-size:.85rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem}
 .lp-item{padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,.06)}
 .lp-item:last-child{border-bottom:none}
-.lp-name{font-size:.88rem;font-weight:600;color:var(--white);margin-bottom:3px}
-.lp-desc{font-size:.8rem;color:rgba(255,255,255,.4);line-height:1.5}
+.lp-name{font-size:.95rem;font-weight:600;color:var(--white);margin-bottom:3px}
+.lp-desc{font-size:.88rem;color:rgba(255,255,255,.72);line-height:1.5}
 
 /* ── TEAM ── */
 .team{background:var(--white)}
@@ -288,15 +294,15 @@ tr:hover td{background:var(--offwh)}
 .th-text h3{font-size:.95rem;font-weight:600;margin-bottom:1px}
 .team-header.de .th-text h3{color:var(--white)}
 .team-header.in .th-text h3{color:var(--dark)}
-.team-header.de .th-text p{color:rgba(255,255,255,.45);font-size:.78rem}
-.team-header.in .th-text p{color:var(--muted);font-size:.78rem}
+.team-header.de .th-text p{color:rgba(255,255,255,.78);font-size:.85rem}
+.team-header.in .th-text p{color:var(--muted);font-size:.85rem}
 .team-body{padding:0 1.5rem 1.5rem}
 .team-member{display:flex;gap:.85rem;align-items:flex-start;padding:1rem 0;border-bottom:1px solid var(--divider)}
 .team-member:last-child{border-bottom:none}
-.tm-avatar{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.82rem;font-weight:600;color:var(--white);flex-shrink:0;font-family:var(--ff-display)}
-.tm-name{font-size:.9rem;font-weight:600;color:var(--dark);margin-bottom:1px}
-.tm-role{font-size:.76rem;color:var(--burg);font-weight:500;margin-bottom:3px}
-.tm-desc{font-size:.78rem;color:var(--muted);line-height:1.55}
+.tm-avatar{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;font-weight:600;color:var(--white);flex-shrink:0;font-family:var(--ff-display)}
+.tm-name{font-size:1.05rem;font-weight:600;color:var(--dark);margin-bottom:2px}
+.tm-role{font-size:.88rem;color:var(--burg);font-weight:500;margin-bottom:4px}
+.tm-desc{font-size:.95rem;color:var(--muted);line-height:1.55}
 
 /* ── CONTACT SECTION ── */
 .contact{background:var(--offwh);border-top:1px solid var(--divider)}
@@ -304,13 +310,13 @@ tr:hover td{background:var(--offwh)}
 .contact-form-wrap{background:var(--white);border-radius:var(--r);border:1px solid var(--divider);overflow:hidden}
 .cf-head{background:var(--dark);padding:1.5rem 1.75rem}
 .cf-head h3{font-family:var(--ff-display);font-size:1.2rem;color:var(--white);font-weight:400;margin-bottom:3px}
-.cf-head p{font-size:.82rem;color:rgba(255,255,255,.45)}
+.cf-head p{font-size:.9rem;color:rgba(255,255,255,.78)}
 .cf-body{padding:1.75rem}
 .form-row{margin-bottom:1rem}
-.form-row label{display:block;font-size:.78rem;font-weight:600;color:var(--dark);margin-bottom:.35rem}
+.form-row label{display:block;font-size:.85rem;font-weight:600;color:var(--dark);margin-bottom:.35rem}
 .form-row input,.form-row select,.form-row textarea{
   width:100%;border:1px solid var(--divider);border-radius:7px;
-  padding:.65rem .9rem;font-size:.875rem;font-family:var(--ff-body);
+  padding:.65rem .9rem;font-size:.95rem;font-family:var(--ff-body);
   color:var(--body);background:var(--white);outline:none;transition:border .2s
 }
 .form-row input:focus,.form-row select:focus,.form-row textarea:focus{border-color:var(--burg)}
@@ -322,42 +328,42 @@ tr:hover td{background:var(--offwh)}
   cursor:pointer;font-family:var(--ff-body);transition:background .2s;margin-top:.25rem
 }
 .form-submit:hover{background:var(--crim)}
-.form-note{font-size:.75rem;color:var(--muted);text-align:center;margin-top:.65rem;line-height:1.5}
+.form-note{font-size:.8rem;color:var(--muted);text-align:center;margin-top:.65rem;line-height:1.5}
 
 /* Contact info sidebar */
 .contact-info{display:flex;flex-direction:column;gap:1.25rem}
 .ci-card{background:var(--white);border:1px solid var(--divider);border-radius:var(--r);padding:1.5rem}
-.ci-title{font-size:.78rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--burg);margin-bottom:1rem}
+.ci-title{font-size:.85rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--burg);margin-bottom:1rem}
 .ci-person{display:flex;gap:.75rem;align-items:flex-start;margin-bottom:.75rem;padding-bottom:.75rem;border-bottom:1px solid var(--divider)}
 .ci-person:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
-.ci-avatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:600;color:var(--white);flex-shrink:0;font-family:var(--ff-display)}
-.ci-name{font-size:.88rem;font-weight:600;color:var(--dark);margin-bottom:1px}
+.ci-avatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.88rem;font-weight:600;color:var(--white);flex-shrink:0;font-family:var(--ff-display)}
+.ci-name{font-size:.95rem;font-weight:600;color:var(--dark);margin-bottom:1px}
 .ci-role{font-size:.76rem;color:var(--muted)}
-.ci-item{display:flex;align-items:center;gap:.6rem;font-size:.85rem;color:var(--body);margin-bottom:.4rem}
+.ci-item{display:flex;align-items:center;gap:.6rem;font-size:.92rem;color:var(--body);margin-bottom:.4rem}
 .ci-item a{color:var(--body);text-decoration:none;transition:color .2s}
 .ci-item a:hover{color:var(--burg)}
 .next-steps{background:var(--dark);border-radius:var(--r);padding:1.5rem}
-.ns-title{font-size:.78rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.ns-title{font-size:.85rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
 .ns-step{display:flex;gap:.75rem;align-items:flex-start;padding:.6rem 0;border-bottom:1px solid rgba(255,255,255,.06)}
 .ns-step:last-child{border-bottom:none}
-.ns-n{width:22px;height:22px;border-radius:50%;background:var(--burg);color:var(--white);font-size:.72rem;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
-.ns-text{font-size:.82rem;color:rgba(255,255,255,.55);line-height:1.5}
+.ns-n{width:22px;height:22px;border-radius:50%;background:var(--burg);color:var(--white);font-size:.78rem;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.ns-text{font-size:.9rem;color:rgba(255,255,255,.82);line-height:1.5}
 .guarantee-strip{background:var(--greenl);border:1px solid rgba(26,82,50,.2);border-radius:8px;padding:1rem 1.25rem;display:flex;gap:.75rem;align-items:flex-start}
 .gs-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px}
-.gs-text{font-size:.82rem;color:var(--green);line-height:1.55;font-weight:500}
+.gs-text{font-size:.9rem;color:var(--green);line-height:1.55;font-weight:500}
 
 /* ── IMPRESSUM ── */
 .impressum{background:var(--dark);padding:3.5rem 2rem}
 .imp-inner{max-width:var(--max);margin:0 auto}
 .imp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.06)}
-.imp-col h4{font-size:.72rem;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:.85rem}
-.imp-col a{display:block;color:rgba(255,255,255,.4);text-decoration:none;font-size:.8rem;margin-bottom:.4rem;transition:color .2s}
+.imp-col h4{font-size:.78rem;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:rgba(255,255,255,.72);margin-bottom:.85rem}
+.imp-col a{display:block;color:rgba(255,255,255,.72);text-decoration:none;font-size:.88rem;margin-bottom:.4rem;transition:color .2s}
 .imp-col a:hover{color:var(--white)}
-.imp-col p{color:rgba(255,255,255,.4);font-size:.8rem;line-height:1.6;margin-bottom:.3rem}
+.imp-col p{color:rgba(255,255,255,.72);font-size:.88rem;line-height:1.6;margin-bottom:.3rem}
 .imp-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:1.5rem;flex-wrap:wrap;gap:1rem}
-.imp-copy{font-size:.75rem;color:rgba(255,255,255,.25)}
-.imp-parent{font-size:.75rem;color:rgba(255,255,255,.25);text-align:right}
-.imp-parent strong{color:rgba(255,255,255,.45)}
+.imp-copy{font-size:.8rem;color:rgba(255,255,255,.25)}
+.imp-parent{font-size:.8rem;color:rgba(255,255,255,.25);text-align:right}
+.imp-parent strong{color:rgba(255,255,255,.78)}
 
 /* ── LEGAL MODALS ── */
 .legal-overlay{position:fixed;inset:0;background:rgba(10,6,18,.9);z-index:500;display:none;align-items:center;justify-content:center;padding:2rem}
@@ -366,16 +372,15 @@ tr:hover td{background:var(--offwh)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 .lm-head{position:sticky;top:0;background:var(--dark);padding:1.25rem 1.5rem;display:flex;justify-content:space-between;align-items:center}
 .lm-head h3{font-family:var(--ff-display);color:var(--white);font-size:1.1rem;font-weight:400}
-.lm-close{background:none;border:none;color:rgba(255,255,255,.5);font-size:1.5rem;cursor:pointer;line-height:1}
+.lm-close{background:none;border:none;color:rgba(255,255,255,.78);font-size:1.5rem;cursor:pointer;line-height:1}
 .lm-body{padding:1.75rem}
 .lm-body h4{font-size:.9rem;font-weight:600;color:var(--dark);margin:1rem 0 .4rem}
-.lm-body p{font-size:.85rem;color:var(--body);line-height:1.7;margin-bottom:.5rem}
-.lm-body address{font-style:normal;font-size:.85rem;color:var(--body);line-height:1.8}
+.lm-body p{font-size:.92rem;color:var(--body);line-height:1.7;margin-bottom:.5rem}
+.lm-body address{font-style:normal;font-size:.92rem;color:var(--body);line-height:1.8}
 
 /* ── MOBILE ── */
 @media(max-width:900px){
   .hero-inner,.solution-grid,.roi-inner,.cand-wrap,.contact-grid,.team-grid{grid-template-columns:1fr}
-  .hero-contact-card{display:none}
   .problem-grid,.steps-grid,.why-grid,.imp-grid{grid-template-columns:1fr 1fr}
   .nav-links{display:none}
 }
@@ -403,6 +408,7 @@ const T = {
     nav_why: 'Warum EuroDoot',
     nav_team: 'Team',
     nav_contact: 'Kontakt',
+    nav_candidate: 'Für Kandidaten ↗',
     nav_cta: 'Jetzt anfragen',
     hero_eyebrow: 'NRW · Logistik · Direktvermittlung aus Indien',
     hero_h1_a: 'Fachkräfte, die',
@@ -426,7 +432,7 @@ const T = {
     sol_title: 'Direktvermittlung. Rechtssicher. Aus einer Hand.',
     sol_sub: 'Wir managen den gesamten Prozess — von der Kandidatensuche in Indien bis zur Ankunft in NRW. Sie erhalten fertig vorbereitete Fachkräfte, die vom ersten Tag an einsatzbereit sind.',
     sol1_title: 'Sourcing & Vorauswahl',
-    sol1_text: 'Unser erfahrenes Team in Delhi mit 16 Jahren Branchenerfahrung identifiziert und prüft Kandidaten persönlich — Qualifikation, Hintergrund, Motivation.',
+    sol1_text: 'Unser erfahrenes Team in Neu Delhi mit 16 Jahren Branchenerfahrung identifiziert und prüft Kandidaten persönlich — Qualifikation, Hintergrund, Motivation.',
     sol2_title: 'Sprachvorbereitung',
     sol2_text: 'Jeder Kandidat absolviert vor der Ausreise einen zertifizierten A1-Deutschkurs. Kommunikation ist vom ersten Arbeitstag an möglich.',
     sol3_title: 'Visa & Behörden',
@@ -441,7 +447,7 @@ const T = {
     proc_title: 'Von der Anfrage bis zum ersten Arbeitstag',
     proc_sub: 'Wir managen alles. Sie führen das Vorstellungsgespräch — und empfangen Ihren neuen Mitarbeiter.',
     step1_t: 'Briefing & Auftrag', step1_d: 'Sie beschreiben die Stelle, Anforderungen und gewünschten Zeitplan. Wir bestätigen schriftlich mit Einzelauftrag.', step1_dur: '1–3 Tage',
-    step2_t: 'Sourcing Indien', step2_d: 'Unser Delhi-Team aktiviert das Netzwerk — Vorauswahl, Hintergrundprüfung, Zeugniskontrolle, Sprachbewertung.', step2_dur: '2–3 Wochen',
+    step2_t: 'Sourcing Indien', step2_d: 'Unser Neu Delhi-Team aktiviert das Netzwerk — Vorauswahl, Hintergrundprüfung, Zeugniskontrolle, Sprachbewertung.', step2_dur: '2–3 Wochen',
     step3_t: 'Kandidatenprofile', step3_d: 'Sie erhalten 3–5 geprüfte Profile mit CV, Videovita und Beurteilung. Wir moderieren das Videointerview auf Englisch oder Deutsch.', step3_dur: '1–2 Wochen',
     step4_t: 'Auswahl & Vertrag', step4_d: 'Sie wählen Ihren Kandidaten. Arbeitsvertrag wird ausgestellt. Alle Behörden- und Visumschritte beginnen sofort.', step4_dur: 'Sofort',
     step5_t: 'Visa & Anerkennung', step5_d: 'Wir koordinieren das vollständige Visumverfahren und die Qualifikationsanerkennung. Unser Immigrationsanwalt begleitet komplexe Fälle.', step5_dur: '8–12 Wochen',
@@ -488,12 +494,12 @@ const T = {
     team_title: 'Professionals auf beiden Seiten — für jeden Schritt',
     team_sub: 'EuroDoot ist kein Ein-Mann-Projekt. Wir haben erfahrene Fachleute, die jeden Aspekt der Vermittlung abdecken — in Deutschland und in Indien.',
     team_de: '🇩🇪', team_de_h: 'Deutschland-Team — NRW', team_de_sub: 'Arbeitgeber-Beziehungen, Visa, Compliance, Integration',
-    team_in: '🇮🇳', team_in_h: 'Indien-Team — Delhi', team_in_sub: 'Sourcing, Screening, Vorbereitung, Begleitung',
+    team_in: '🇮🇳', team_in_h: 'Indien-Team — Neu Delhi', team_in_sub: 'Sourcing, Screening, Vorbereitung, Begleitung',
     m1_name: 'Sameer Saran', m1_role: 'Geschäftsleitung, Deutschland', m1_desc: 'Gründer & Geschäftsführer. Betreibt Saran Capital Holdings UG in NRW, hat Mitarbeiter aus Indien eingestellt, integriert und durch jede Behörde begleitet.',
     m2_name: 'Zanda Strode', m2_role: 'Vertriebsleitung, Deutschland', m2_desc: 'Verantwortlich für Kundenbeziehungen und Auftragsmanagement mit deutschen Logistikunternehmen in NRW.',
     m3_name: 'Kristine Sveta', m3_role: 'Industry Advisor, Logistik', m3_desc: 'Bringt tiefes Insiderwissen aus der Logistikbranche ein — kennt die Betriebe, die Anforderungen und die tägliche Realität in Lagern in NRW.',
     m4_name: 'Ieva Strode', m4_role: 'HR & Compliance', m4_desc: 'Kennt das deutsche HR-Compliance-Umfeld: Agentur für Arbeit, Aufenthaltsgesetz, Arbeitsrecht und die spezifischen Pflichten bei der Beschäftigung von Drittstaatsangehörigen.',
-    m5_name: 'Sanchit Saran', m5_role: 'Geschäftsleitung, Indien', m5_desc: '16 Jahre Branchenerfahrung. Leitet das Sourcing-Netzwerk in Indien und koordiniert mit seinem Team die vollständige Kandidatenvorbereitung von Delhi aus.',
+    m5_name: 'Sanchit Saran', m5_role: 'Geschäftsleitung, Indien', m5_desc: '16 Jahre Branchenerfahrung. Leitet das Sourcing-Netzwerk in Indien und koordiniert mit seinem Team die vollständige Kandidatenvorbereitung von Neu Delhi aus.',
     m6_name: 'Soni Kumari', m6_role: 'Back Office', m6_desc: 'Verantwortlich für Dokumentenmanagement, Koordination mit Behörden und administrativen Support für alle laufenden Vermittlungsvorgänge.',
     contact_label: 'Kontakt',
     contact_title: 'Sprechen wir.',
@@ -524,7 +530,7 @@ const T = {
     imp_legal_links: ['Impressum','Datenschutz','AGB'],
     imp_copy: '© 2025 EuroDoot',
     imp_parent: 'Eine Marke der',
-    lang_btn: '🇬🇧 English',
+    lang_btn: 'ENG',
     impressum_title: 'Impressum',
     impressum_body: `<h4>Angaben gemäß § 5 TMG</h4>
 <address>Saran Capital Holdings UG (haftungsbeschränkt)<br>Boschstraße 16<br>47533 Kleve<br>Deutschland</address>
@@ -555,6 +561,7 @@ const T = {
     nav_why: 'Why EuroDoot',
     nav_team: 'Team',
     nav_contact: 'Contact',
+    nav_candidate: 'For Candidates ↗',
     nav_cta: 'Get in touch',
     hero_eyebrow: 'NRW · Logistics · Direct Placement from India',
     hero_h1_a: 'Skilled workers who',
@@ -578,7 +585,7 @@ const T = {
     sol_title: 'Direct placement. Legally compliant. All from one source.',
     sol_sub: 'We manage the entire process — from candidate search in India to arrival in NRW. You receive fully prepared professionals, ready to work from day one.',
     sol1_title: 'Sourcing & Pre-selection',
-    sol1_text: 'Our experienced Delhi team with 16 years of industry experience personally identifies and checks candidates — qualifications, background, motivation.',
+    sol1_text: 'Our experienced New Delhi team with 16 years of industry experience personally identifies and checks candidates — qualifications, background, motivation.',
     sol2_title: 'Language preparation',
     sol2_text: 'Every candidate completes a certified A1 German course before departure. Communication is possible from the very first working day.',
     sol3_title: 'Visa & Authorities',
@@ -593,7 +600,7 @@ const T = {
     proc_title: 'From enquiry to first day at work',
     proc_sub: 'We manage everything. You conduct the interview — and welcome your new employee.',
     step1_t: 'Briefing & Order', step1_d: 'You describe the role, requirements and timeline. We confirm in writing with a formal service order.', step1_dur: '1–3 days',
-    step2_t: 'Sourcing India', step2_d: 'Our Delhi team activates the network — pre-selection, background check, certificate verification, language assessment.', step2_dur: '2–3 weeks',
+    step2_t: 'Sourcing India', step2_d: 'Our New Delhi team activates the network — pre-selection, background check, certificate verification, language assessment.', step2_dur: '2–3 weeks',
     step3_t: 'Candidate profiles', step3_d: 'You receive 3–5 verified profiles with CV, video introduction and our assessment. We moderate the video interview in English or German.', step3_dur: '1–2 weeks',
     step4_t: 'Selection & Contract', step4_d: 'You choose your candidate. Employment contract is issued. All visa and authority steps begin immediately.', step4_dur: 'Immediate',
     step5_t: 'Visa & Recognition', step5_d: 'We coordinate the complete visa process and qualification recognition. Our immigration lawyer handles complex cases.', step5_dur: '8–12 weeks',
@@ -640,12 +647,12 @@ const T = {
     team_title: 'Professionals on both sides — for every step',
     team_sub: 'EuroDoot is not a one-person project. We have experienced professionals covering every aspect of the placement — in Germany and in India.',
     team_de: '🇩🇪', team_de_h: 'Germany Team — NRW', team_de_sub: 'Employer relations, visa, compliance, integration',
-    team_in: '🇮🇳', team_in_h: 'India Team — Delhi', team_in_sub: 'Sourcing, screening, preparation, candidate support',
+    team_in: '🇮🇳', team_in_h: 'India Team — New Delhi', team_in_sub: 'Sourcing, screening, preparation, candidate support',
     m1_name: 'Sameer Saran', m1_role: 'Managing Director, Germany', m1_desc: 'Founder & MD. Operates Saran Capital Holdings UG in NRW, has personally hired from India, managed immigration and settled employees in Germany.',
     m2_name: 'Zanda Strode', m2_role: 'Sales Director, Germany', m2_desc: 'Responsible for client relationships and order management with German logistics companies in NRW.',
     m3_name: 'Kristine Sveta', m3_role: 'Industry Advisor, Logistics', m3_desc: 'Brings deep insider knowledge from the logistics sector — knows the operations, requirements and daily reality of warehouses in NRW.',
     m4_name: 'Ieva Strode', m4_role: 'HR & Compliance', m4_desc: 'Expert in German HR compliance: Agentur für Arbeit processes, Aufenthaltsgesetz obligations, employment law and the specific duties when employing third-country nationals.',
-    m5_name: 'Sanchit Saran', m5_role: 'Managing Director, India', m5_desc: '16 years of industry experience. Leads the sourcing network in India and coordinates full candidate preparation from Delhi.',
+    m5_name: 'Sanchit Saran', m5_role: 'Managing Director, India', m5_desc: '16 years of industry experience. Leads the sourcing network in India and coordinates full candidate preparation from New Delhi.',
     m6_name: 'Soni Kumari', m6_role: 'Back Office', m6_desc: 'Responsible for document management, coordination with authorities and administrative support for all active placement cases.',
     contact_label: 'Contact',
     contact_title: "Let's talk.",
@@ -676,7 +683,7 @@ const T = {
     imp_legal_links: ['Legal Notice','Privacy Policy','Terms'],
     imp_copy: '© 2025 EuroDoot',
     imp_parent: 'A brand of',
-    lang_btn: '🇩🇪 Deutsch',
+    lang_btn: 'DEU',
     impressum_title: 'Legal Notice (Impressum)',
     impressum_body: `<h4>Information pursuant to § 5 TMG</h4>
 <address>Saran Capital Holdings UG (limited liability)<br>Boschstraße 16<br>47533 Kleve<br>Germany</address>
@@ -754,8 +761,8 @@ function toggleLang() {
       <li><a href="#contact" data-i18n="nav_contact">Kontakt</a></li>
     </ul>
     <div class="nav-right">
-      <a href="tel:+4915204084556" class="nav-phone">+49 152 04084556</a>
-      <button class="lang-btn" onclick="toggleLang()" data-i18n="lang_btn">🇬🇧 English</button>
+      <a href="https://eurodoot.in" class="nav-candidate" target="_blank" data-i18n="nav_candidate">🇮🇳 Kandidaten ↗</a>
+      <button class="lang-btn" onclick="toggleLang()" data-i18n="lang_btn">ENG</button>
       <a href="#contact" class="nav-cta" data-i18n="nav_cta">Jetzt anfragen</a>
     </div>
   </div>
@@ -782,32 +789,7 @@ function toggleLang() {
         <div class="hstat"><span class="hstat-n" data-i18n="hstat3_n">A1</span><span class="hstat-l" data-i18n="hstat3_l">Deutsch vor Ankunft</span></div>
       </div>
     </div>
-    <!-- HAPEKO-style named contact card -->
-    <div class="hero-contact-card fade-up">
-      <div class="hcc-label" data-i18n="hcc_label">Ihr Ansprechpartner</div>
-      <div class="hcc-person">
-        <div class="hcc-avatar" style="background:#8B1A3A">SS</div>
-        <div>
-          <div class="hcc-name">Sameer Saran</div>
-          <div class="hcc-role" data-i18n="m1_role">Geschäftsleitung, Deutschland</div>
-        </div>
-      </div>
-      <div class="hcc-contacts">
-        <div class="hcc-row">
-          <span class="hcc-icon">📞</span>
-          <a href="tel:+4915204084556" class="hcc-val">+49 152 04084556</a>
-        </div>
-        <div class="hcc-row">
-          <span class="hcc-icon">✉️</span>
-          <a href="mailto:eurodoot.de@gmail.com" class="hcc-val">eurodoot.de@gmail.com</a>
-        </div>
-        <div class="hcc-row">
-          <span class="hcc-icon">📍</span>
-          <span class="hcc-val">Kleve, NRW, Deutschland</span>
-        </div>
-      </div>
-      <a href="#contact" class="hcc-cta" data-i18n="hcc_cta">Kostenlos anfragen →</a>
-    </div>
+
   </div>
 </section>
 
@@ -848,7 +830,7 @@ function toggleLang() {
         <div class="solution-cards" style="margin-top:2rem">
           <div class="sol-card fade-up">
             <div class="sol-num">01</div>
-            <div><div class="sol-title" data-i18n="sol1_title">Sourcing & Vorauswahl</div><div class="sol-text" data-i18n="sol1_text">Unser erfahrenes Team in Delhi mit 16 Jahren Branchenerfahrung identifiziert und prüft Kandidaten persönlich.</div></div>
+            <div><div class="sol-title" data-i18n="sol1_title">Sourcing & Vorauswahl</div><div class="sol-text" data-i18n="sol1_text">Unser erfahrenes Team in New Delhi mit 16 Jahren Branchenerfahrung identifiziert und prüft Kandidaten persönlich.</div></div>
           </div>
           <div class="sol-card fade-up">
             <div class="sol-num">02</div>
@@ -884,7 +866,7 @@ function toggleLang() {
     <p class="sec-sub" data-i18n="proc_sub">Wir managen alles. Sie führen das Vorstellungsgespräch — und empfangen Ihren neuen Mitarbeiter.</p>
     <div class="steps-grid">
       <div class="step-cell fade-up"><div class="step-n">1</div><div class="step-title" data-i18n="step1_t">Briefing & Auftrag</div><div class="step-text" data-i18n="step1_d">Sie beschreiben die Stelle, Anforderungen und gewünschten Zeitplan. Wir bestätigen schriftlich.</div><div class="step-dur" data-i18n="step1_dur">1–3 Tage</div></div>
-      <div class="step-cell fade-up"><div class="step-n">2</div><div class="step-title" data-i18n="step2_t">Sourcing Indien</div><div class="step-text" data-i18n="step2_d">Unser Delhi-Team aktiviert das Netzwerk — Vorauswahl, Hintergrundprüfung, Zeugniskontrolle.</div><div class="step-dur" data-i18n="step2_dur">2–3 Wochen</div></div>
+      <div class="step-cell fade-up"><div class="step-n">2</div><div class="step-title" data-i18n="step2_t">Sourcing Indien</div><div class="step-text" data-i18n="step2_d">Unser New Delhi-Team aktiviert das Netzwerk — Vorauswahl, Hintergrundprüfung, Zeugniskontrolle.</div><div class="step-dur" data-i18n="step2_dur">2–3 Wochen</div></div>
       <div class="step-cell fade-up"><div class="step-n">3</div><div class="step-title" data-i18n="step3_t">Kandidatenprofile</div><div class="step-text" data-i18n="step3_d">Sie erhalten 3–5 geprüfte Profile mit CV und Videovita. Wir moderieren das Videointerview.</div><div class="step-dur" data-i18n="step3_dur">1–2 Wochen</div></div>
       <div class="step-cell fade-up"><div class="step-n">4</div><div class="step-title" data-i18n="step4_t">Auswahl & Vertrag</div><div class="step-text" data-i18n="step4_d">Sie wählen Ihren Kandidaten. Arbeitsvertrag wird ausgestellt. Alle Behördenschritte beginnen sofort.</div><div class="step-dur" data-i18n="step4_dur">Sofort</div></div>
       <div class="step-cell fade-up"><div class="step-n">5</div><div class="step-title" data-i18n="step5_t">Visa & Anerkennung</div><div class="step-text" data-i18n="step5_d">Wir koordinieren das vollständige Visumverfahren. Unser Immigrationsanwalt begleitet komplexe Fälle.</div><div class="step-dur" data-i18n="step5_dur">8–12 Wochen</div></div>
@@ -919,11 +901,11 @@ function toggleLang() {
         </div>
         <!-- Visual comparison bar -->
         <div style="margin-top:2rem;background:var(--white);border:1px solid var(--divider);border-radius:var(--r);padding:1.5rem">
-          <div style="font-size:.78rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:1rem" data-i18n="roi_b1">Zeitarbeit über 3 Jahre</div>
+          <div style="font-size:.85rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:1rem" data-i18n="roi_b1">Zeitarbeit über 3 Jahre</div>
           <div style="position:relative;height:10px;background:var(--divider);border-radius:5px;margin-bottom:.5rem">
             <div id="barZeit" style="position:absolute;left:0;top:0;height:100%;background:#C8213F;border-radius:5px;width:100%;transition:width .4s"></div>
           </div>
-          <div style="font-size:.78rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin:.75rem 0 .5rem" data-i18n="roi_b2">EuroDoot Direktanstellung (3 J.)</div>
+          <div style="font-size:.85rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin:.75rem 0 .5rem" data-i18n="roi_b2">EuroDoot Direktanstellung (3 J.)</div>
           <div style="position:relative;height:10px;background:var(--divider);border-radius:5px">
             <div id="barEuro" style="position:absolute;left:0;top:0;height:100%;background:var(--green);border-radius:5px;width:60%;transition:width .4s"></div>
           </div>
@@ -945,7 +927,7 @@ function toggleLang() {
           <span class="roi-amount" id="savingAmt">€101.390</span>
           <div class="roi-desc" data-i18n="roi_d3">Pro Mitarbeiter. Für immer.</div>
         </div>
-        <div style="font-size:.75rem;color:var(--muted);line-height:1.6;padding:.75rem">Alle Angaben sind Schätzungen. Arbeitgeberanteil 30 %. Keine Rechts- oder Steuerberatung.</div>
+        <div style="font-size:.8rem;color:var(--muted);line-height:1.6;padding:.75rem">Alle Angaben sind Schätzungen. Arbeitgeberanteil 30 %. Keine Rechts- oder Steuerberatung.</div>
       </div>
     </div>
   </div>
@@ -1021,19 +1003,19 @@ function toggleLang() {
         <div class="team-body" style="background:var(--dark)">
           <div class="team-member" style="border-color:rgba(255,255,255,.08)">
             <div class="tm-avatar" style="background:#8B1A3A">SS</div>
-            <div><div class="tm-name" style="color:#fff" data-i18n="m1_name">Sameer Saran</div><div class="tm-role" data-i18n="m1_role">Geschäftsleitung, Deutschland</div><div class="tm-desc" style="color:rgba(255,255,255,.45)" data-i18n="m1_desc">Gründer & Geschäftsführer. Betreibt Saran Capital Holdings UG in NRW, hat Mitarbeiter aus Indien eingestellt, integriert und durch jede Behörde begleitet.</div></div>
+            <div><div class="tm-name" style="color:#fff" data-i18n="m1_name">Sameer Saran</div><div class="tm-role" data-i18n="m1_role">Geschäftsleitung, Deutschland</div><div class="tm-desc" style="color:rgba(255,255,255,.78)" data-i18n="m1_desc">Gründer & Geschäftsführer. Betreibt Saran Capital Holdings UG in NRW, hat Mitarbeiter aus Indien eingestellt, integriert und durch jede Behörde begleitet.</div></div>
           </div>
           <div class="team-member" style="border-color:rgba(255,255,255,.08)">
             <div class="tm-avatar" style="background:#1E3A8A">ZS</div>
-            <div><div class="tm-name" style="color:#fff" data-i18n="m2_name">Zanda Strode</div><div class="tm-role" data-i18n="m2_role">Vertriebsleitung, Deutschland</div><div class="tm-desc" style="color:rgba(255,255,255,.45)" data-i18n="m2_desc">Verantwortlich für Kundenbeziehungen und Auftragsmanagement mit deutschen Logistikunternehmen in NRW.</div></div>
+            <div><div class="tm-name" style="color:#fff" data-i18n="m2_name">Zanda Strode</div><div class="tm-role" data-i18n="m2_role">Vertriebsleitung, Deutschland</div><div class="tm-desc" style="color:rgba(255,255,255,.78)" data-i18n="m2_desc">Verantwortlich für Kundenbeziehungen und Auftragsmanagement mit deutschen Logistikunternehmen in NRW.</div></div>
           </div>
           <div class="team-member" style="border-color:rgba(255,255,255,.08)">
             <div class="tm-avatar" style="background:#374151">KS</div>
-            <div><div class="tm-name" style="color:#fff" data-i18n="m3_name">Kristine Sveta</div><div class="tm-role" data-i18n="m3_role">Industry Advisor, Logistik</div><div class="tm-desc" style="color:rgba(255,255,255,.45)" data-i18n="m3_desc">Bringt tiefes Insiderwissen aus der Logistikbranche ein — kennt die Betriebe, die Anforderungen und die tägliche Realität in Lagern in NRW.</div></div>
+            <div><div class="tm-name" style="color:#fff" data-i18n="m3_name">Kristine Sveta</div><div class="tm-role" data-i18n="m3_role">Industry Advisor, Logistik</div><div class="tm-desc" style="color:rgba(255,255,255,.78)" data-i18n="m3_desc">Bringt tiefes Insiderwissen aus der Logistikbranche ein — kennt die Betriebe, die Anforderungen und die tägliche Realität in Lagern in NRW.</div></div>
           </div>
           <div class="team-member" style="border-bottom:none;border-color:rgba(255,255,255,.08)">
             <div class="tm-avatar" style="background:#4C1D95">IS</div>
-            <div><div class="tm-name" style="color:#fff" data-i18n="m4_name">Ieva Strode</div><div class="tm-role" data-i18n="m4_role">HR & Compliance</div><div class="tm-desc" style="color:rgba(255,255,255,.45)" data-i18n="m4_desc">Kennt das deutsche HR-Compliance-Umfeld: Agentur für Arbeit, Aufenthaltsgesetz, Arbeitsrecht und die spezifischen Pflichten bei der Beschäftigung von Drittstaatsangehörigen.</div></div>
+            <div><div class="tm-name" style="color:#fff" data-i18n="m4_name">Ieva Strode</div><div class="tm-role" data-i18n="m4_role">HR & Compliance</div><div class="tm-desc" style="color:rgba(255,255,255,.78)" data-i18n="m4_desc">Kennt das deutsche HR-Compliance-Umfeld: Agentur für Arbeit, Aufenthaltsgesetz, Arbeitsrecht und die spezifischen Pflichten bei der Beschäftigung von Drittstaatsangehörigen.</div></div>
           </div>
         </div>
       </div>
@@ -1042,14 +1024,14 @@ function toggleLang() {
         <div class="team-header in">
           <div class="team-flag" data-i18n="team_in">🇮🇳</div>
           <div class="th-text">
-            <h3 data-i18n="team_in_h">Indien-Team — Delhi</h3>
+            <h3 data-i18n="team_in_h">Indien-Team — New Delhi</h3>
             <p data-i18n="team_in_sub">Sourcing, Screening, Vorbereitung, Begleitung</p>
           </div>
         </div>
         <div class="team-body">
           <div class="team-member">
             <div class="tm-avatar" style="background:#065F46">SC</div>
-            <div><div class="tm-name" data-i18n="m5_name">Sanchit Saran</div><div class="tm-role" data-i18n="m5_role">Geschäftsleitung, Indien</div><div class="tm-desc" data-i18n="m5_desc">16 Jahre Branchenerfahrung. Leitet das Sourcing-Netzwerk in Indien und koordiniert mit seinem Team die vollständige Kandidatenvorbereitung von Delhi aus.</div></div>
+            <div><div class="tm-name" data-i18n="m5_name">Sanchit Saran</div><div class="tm-role" data-i18n="m5_role">Geschäftsleitung, Indien</div><div class="tm-desc" data-i18n="m5_desc">16 Jahre Branchenerfahrung. Leitet das Sourcing-Netzwerk in Indien und koordiniert mit seinem Team die vollständige Kandidatenvorbereitung von New Delhi aus.</div></div>
           </div>
           <div class="team-member" style="border-bottom:none">
             <div class="tm-avatar" style="background:#92400E">SK</div>
