@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EuroDoot — Fachkräfte aus Indien für Ihre Logistik in NRW</title>
+<meta name="description" content="EuroDoot vermittelt motivierte Fachkräfte aus Indien für Logistik- und Lagerbetriebe in Nordrhein-Westfalen. Direktvermittlung, rechtssicher, mit Festpreis für Ausbildungsplätze.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ── RESET ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --burg:#8B1A3A; --crim:#C8213F; --gold:#C9A84C;
+  --dark:#0A0612; --ink:#1A0A18; --body:#2D1428;
+  --muted:#7A5568; --divider:#E8D8DF; --offwh:#FBF7F8;
+  --white:#FFFFFF; --green:#1A5232; --greenl:#EBF5EE;
+  --pink:#FFD4DC; --stone:#F5F0F2;
+  --ff-display:'Playfair Display',Georgia,serif;
+  --ff-body:'Outfit',system-ui,sans-serif;
+  --max:1140px; --r:10px;
+  --nav-h:68px;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--ff-body);color:var(--body);background:var(--white);line-height:1.6;overflow-x:hidden}
+
+/* ── CANDIDATE BANNER ── */
+.cand-banner{background:var(--ink);padding:.65rem 2rem}
+.cand-inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.cand-banner p{color:rgba(255,255,255,.5);font-size:.8rem}
+.cand-banner strong{color:rgba(255,255,255,.8)}
+.cand-link{font-size:.78rem;color:var(--gold);font-weight:500;text-decoration:none;border:1px solid rgba(201,168,76,.35);padding:4px 12px;border-radius:4px;transition:all .2s;white-space:nowrap}
+.cand-link:hover{background:var(--gold);color:var(--dark)}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  background:rgba(10,6,18,0.97);backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(139,26,58,.25);
+  /* banner height: the nav sits below it when scrolled to top */
+}
+.nav-inner{
+  max-width:var(--max);margin:0 auto;
+  padding:0 2rem;height:var(--nav-h);
+  display:flex;align-items:center;justify-content:space-between;gap:1.5rem
+}
+.nav-logo{
+  font-family:var(--ff-display);font-size:1.6rem;color:var(--white);
+  text-decoration:none;display:flex;align-items:baseline;gap:0;letter-spacing:-.5px;flex-shrink:0
+}
+.nav-logo span{color:var(--pink)}
+.nav-phone{
+  display:flex;align-items:center;gap:6px;
+  color:var(--white);text-decoration:none;font-size:.9rem;font-weight:500;
+  border:1px solid rgba(255,255,255,.15);border-radius:6px;padding:5px 14px;
+  transition:border-color .2s
+}
+.nav-phone:hover{border-color:var(--burg)}
+.nav-phone::before{content:'📞';font-size:.8rem}
+.nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none}
+.nav-links a{color:rgba(255,255,255,.65);text-decoration:none;font-size:.85rem;font-weight:400;transition:color .2s}
+.nav-links a:hover{color:var(--white)}
+.nav-right{display:flex;align-items:center;gap:.75rem}
+.lang-btn{
+  background:none;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.55);
+  font-size:.75rem;font-weight:500;padding:4px 10px;border-radius:4px;
+  cursor:pointer;font-family:var(--ff-body);transition:all .2s;letter-spacing:.3px
+}
+.lang-btn:hover{border-color:var(--gold);color:var(--gold)}
+.nav-cta{
+  background:var(--burg);color:var(--white);border:none;
+  font-size:.85rem;font-weight:600;padding:8px 20px;border-radius:6px;
+  cursor:pointer;font-family:var(--ff-body);text-decoration:none;
+  transition:background .2s;white-space:nowrap
+}
+.nav-cta:hover{background:var(--crim)}
+
+/* ── HERO ── */
+.hero{
+  min-height:100vh;padding:calc(var(--nav-h) + 5rem) 2rem 5rem;
+  background:var(--dark);position:relative;overflow:hidden;
+  display:flex;align-items:center
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 70% 60% at 15% 50%, rgba(139,26,58,.22) 0%,transparent 65%),
+    radial-gradient(ellipse 50% 40% at 85% 20%, rgba(201,168,76,.08) 0%,transparent 60%),
+    radial-gradient(ellipse 80% 80% at 50% 100%, rgba(139,26,58,.08) 0%,transparent 60%);
+}
+/* Subtle grid texture */
+.hero-bg::after{
+  content:'';position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);
+  background-size:60px 60px;
+}
+.hero-inner{max-width:var(--max);margin:0 auto;position:relative;z-index:1;width:100%;display:grid;grid-template-columns:1fr 420px;gap:4rem;align-items:center}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.3);
+  color:var(--gold);font-size:.75rem;font-weight:500;letter-spacing:.8px;text-transform:uppercase;
+  padding:5px 14px;border-radius:20px;margin-bottom:1.5rem
+}
+.hero h1{
+  font-family:var(--ff-display);font-size:clamp(2.4rem,4.5vw,3.6rem);
+  color:var(--white);line-height:1.1;font-weight:400;margin-bottom:1.25rem
+}
+.hero h1 em{color:var(--gold);font-style:italic;display:block}
+.hero-sub{font-size:1rem;color:rgba(255,255,255,.55);line-height:1.75;max-width:500px;margin-bottom:2rem}
+.hero-actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:3rem}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;border-radius:7px;font-weight:600;font-size:.9rem;cursor:pointer;transition:all .2s;border:none;padding:13px 24px;font-family:var(--ff-body)}
+.btn-primary{background:var(--burg);color:var(--white)}
+.btn-primary:hover{background:var(--crim);transform:translateY(-1px)}
+.btn-ghost{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);color:var(--white)}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.hero-stats{display:flex;gap:2.5rem}
+.hstat{border-left:2px solid var(--burg);padding-left:1rem}
+.hstat-n{font-family:var(--ff-display);font-size:2rem;color:var(--white);line-height:1;display:block;font-weight:400}
+.hstat-l{font-size:.72rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.5px;margin-top:3px;display:block}
+
+/* Contact card in hero */
+.hero-contact-card{
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);
+  border-radius:14px;padding:2rem;
+  backdrop-filter:blur(8px);
+}
+.hcc-label{font-size:.7rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem}
+.hcc-person{display:flex;align-items:flex-start;gap:.85rem;margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid rgba(255,255,255,.07)}
+.hcc-avatar{
+  width:44px;height:44px;border-radius:50%;
+  background:var(--burg);color:var(--white);
+  font-size:.85rem;font-weight:600;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  font-family:var(--ff-display);letter-spacing:-.5px
+}
+.hcc-name{font-size:.95rem;font-weight:600;color:var(--white);margin-bottom:2px}
+.hcc-role{font-size:.78rem;color:rgba(255,255,255,.45)}
+.hcc-contacts{display:flex;flex-direction:column;gap:.6rem}
+.hcc-row{display:flex;align-items:center;gap:.6rem}
+.hcc-icon{font-size:.9rem;width:20px;text-align:center;flex-shrink:0}
+.hcc-val{font-size:.88rem;color:rgba(255,255,255,.7);text-decoration:none;transition:color .2s}
+.hcc-val:hover{color:var(--gold)}
+.hcc-cta{display:block;margin-top:1.25rem;background:var(--burg);color:var(--white);text-align:center;border-radius:7px;padding:.75rem;font-weight:600;font-size:.88rem;text-decoration:none;transition:background .2s}
+.hcc-cta:hover{background:var(--crim)}
+
+/* ── SECTION COMMON ── */
+section{padding:5.5rem 2rem}
+.container{max-width:var(--max);margin:0 auto}
+.sec-label{font-size:.72rem;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--burg);margin-bottom:.65rem;display:block}
+.sec-title{font-family:var(--ff-display);font-size:clamp(1.9rem,3.2vw,2.7rem);color:var(--dark);line-height:1.15;margin-bottom:1rem;font-weight:400}
+.sec-sub{font-size:1rem;color:var(--muted);line-height:1.75;max-width:580px}
+
+/* ── PROBLEM ── */
+.problem{background:var(--offwh);border-top:1px solid var(--divider)}
+.problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+.prob-card{background:var(--white);border:1px solid var(--divider);border-radius:var(--r);padding:2rem;position:relative;overflow:hidden;transition:box-shadow .2s}
+.prob-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--burg)}
+.prob-card:hover{box-shadow:0 6px 24px rgba(139,26,58,.1)}
+.prob-num{font-family:var(--ff-display);font-size:2.8rem;color:var(--dark);line-height:1;margin-bottom:.6rem;font-weight:400}
+.prob-label{font-size:.95rem;font-weight:600;color:var(--dark);margin-bottom:.4rem}
+.prob-text{font-size:.85rem;color:var(--muted);line-height:1.6}
+
+/* ── SOLUTION / SERVICES ── */
+.solution{background:var(--white)}
+.solution-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-top:3rem}
+.solution-cards{display:flex;flex-direction:column;gap:1rem}
+.sol-card{
+  background:var(--offwh);border:1px solid var(--divider);border-radius:var(--r);
+  padding:1.5rem 1.75rem;display:flex;gap:1.25rem;align-items:flex-start;
+  transition:all .2s;cursor:default
+}
+.sol-card:hover{border-color:var(--burg);background:var(--white);box-shadow:0 4px 16px rgba(139,26,58,.07)}
+.sol-num{font-family:var(--ff-display);font-size:1.8rem;color:var(--divider);line-height:1;flex-shrink:0;font-weight:400;transition:color .2s}
+.sol-card:hover .sol-num{color:var(--burg)}
+.sol-title{font-size:1rem;font-weight:600;color:var(--dark);margin-bottom:.35rem}
+.sol-text{font-size:.875rem;color:var(--muted);line-height:1.6}
+
+/* Quote panel */
+.quote-panel{
+  background:var(--dark);border-radius:14px;padding:2.5rem;
+  position:relative;overflow:hidden
+}
+.quote-panel::before{
+  content:'"';font-family:var(--ff-display);font-size:10rem;color:rgba(139,26,58,.25);
+  position:absolute;top:-1.5rem;left:1.5rem;line-height:1
+}
+.qp-text{font-family:var(--ff-display);font-size:1.15rem;color:var(--white);line-height:1.7;font-style:italic;position:relative;z-index:1;margin-bottom:1.5rem}
+.qp-author{font-size:.82rem;color:rgba(255,255,255,.45);font-weight:500}
+.qp-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.08)}
+.qps{text-align:center}
+.qps-n{font-family:var(--ff-display);font-size:1.8rem;color:var(--gold);display:block;font-weight:400}
+.qps-l{font-size:.72rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.4px}
+
+/* ── PROCESS ── */
+.process{background:var(--dark)}
+.process .sec-title{color:var(--white)}
+.process .sec-sub{color:rgba(255,255,255,.5)}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:3rem;background:rgba(255,255,255,.06);border-radius:var(--r);overflow:hidden}
+.step-cell{background:var(--dark);padding:1.75rem;position:relative;transition:background .2s}
+.step-cell:hover{background:#140820}
+.step-n{
+  width:36px;height:36px;border-radius:50%;background:var(--burg);
+  color:var(--white);font-size:.9rem;font-weight:600;
+  display:flex;align-items:center;justify-content:center;margin-bottom:1rem
+}
+.step-title{font-size:.95rem;font-weight:600;color:var(--white);margin-bottom:.4rem}
+.step-text{font-size:.82rem;color:rgba(255,255,255,.45);line-height:1.6}
+.step-dur{font-size:.75rem;color:var(--gold);margin-top:.6rem;font-weight:500}
+
+/* ── ROI CALCULATOR ── */
+.roi{background:var(--offwh);border-top:1px solid var(--divider)}
+.roi-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:3rem}
+.roi-controls{}
+.roi-control{margin-bottom:1.75rem}
+.roi-control label{display:flex;justify-content:space-between;align-items:center;margin-bottom:.75rem}
+.rc-name{font-size:.88rem;font-weight:600;color:var(--dark)}
+.rc-val{font-family:var(--ff-display);font-size:1.1rem;color:var(--burg);font-weight:400}
+input[type=range]{
+  width:100%;-webkit-appearance:none;appearance:none;
+  height:4px;border-radius:2px;background:var(--divider);outline:none;
+  cursor:pointer
+}
+input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance:none;appearance:none;
+  width:20px;height:20px;border-radius:50%;
+  background:var(--burg);cursor:pointer;
+  border:3px solid var(--white);box-shadow:0 1px 4px rgba(139,26,58,.3)
+}
+input[type=range]::-moz-range-thumb{
+  width:20px;height:20px;border-radius:50%;
+  background:var(--burg);cursor:pointer;border:3px solid var(--white)
+}
+.roi-note{font-size:.78rem;color:var(--muted);margin-top:.4rem}
+
+.roi-results{display:flex;flex-direction:column;gap:1rem}
+.roi-card{border-radius:var(--r);padding:1.5rem;transition:transform .15s}
+.roi-card:hover{transform:translateY(-2px)}
+.roi-card.alt{background:var(--white);border:1px solid var(--divider)}
+.roi-card.saving{background:var(--green);border:1px solid var(--green)}
+.roi-badge{font-size:.7rem;font-weight:600;letter-spacing:.6px;text-transform:uppercase;margin-bottom:.6rem;display:block}
+.roi-card.alt .roi-badge{color:var(--muted)}
+.roi-card.saving .roi-badge{color:rgba(255,255,255,.65)}
+.roi-amount{font-family:var(--ff-display);font-size:2.2rem;font-weight:400;line-height:1;margin-bottom:.4rem;display:block}
+.roi-card.alt .roi-amount{color:var(--dark)}
+.roi-card.saving .roi-amount{color:#7FFFC4}
+.roi-desc{font-size:.82rem}
+.roi-card.alt .roi-desc{color:var(--muted)}
+.roi-card.saving .roi-desc{color:rgba(255,255,255,.65)}
+.roi-divider{height:1px;background:var(--divider);margin:.25rem 0}
+
+/* ── WHY EURODOOT ── */
+.why{background:var(--white)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:3rem}
+.why-card{padding:1.75rem;border-radius:var(--r);background:var(--offwh);border:1px solid var(--divider);transition:all .2s;position:relative;overflow:hidden}
+.why-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--burg);transform:scaleX(0);transition:transform .3s;transform-origin:left}
+.why-card:hover::after{transform:scaleX(1)}
+.why-card:hover{border-color:var(--burg);box-shadow:0 4px 20px rgba(139,26,58,.08)}
+.why-icon{font-size:1.5rem;margin-bottom:1rem;display:block}
+.why-title{font-size:1rem;font-weight:600;color:var(--dark);margin-bottom:.4rem}
+.why-text{font-size:.855rem;color:var(--muted);line-height:1.65}
+
+/* ── CANDIDATES TABLE ── */
+.candidates{background:var(--offwh);border-top:1px solid var(--divider)}
+.cand-wrap{margin-top:3rem;display:grid;grid-template-columns:1fr 360px;gap:3rem;align-items:start}
+.cand-table-wrap{overflow:hidden;border-radius:var(--r);border:1px solid var(--divider)}
+table{width:100%;border-collapse:collapse}
+thead{background:var(--dark)}
+th{text-align:left;font-size:.75rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:rgba(255,255,255,.6);padding:.9rem 1.25rem}
+td{padding:.85rem 1.25rem;border-bottom:1px solid var(--divider);font-size:.875rem;color:var(--body);vertical-align:top;background:var(--white)}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:var(--offwh)}
+.good{color:var(--green);font-weight:600}
+.legal-panel{background:var(--dark);border-radius:var(--r);padding:1.75rem;position:sticky;top:calc(var(--nav-h) + 1rem)}
+.lp-title{font-size:.78rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem}
+.lp-item{padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.lp-item:last-child{border-bottom:none}
+.lp-name{font-size:.88rem;font-weight:600;color:var(--white);margin-bottom:3px}
+.lp-desc{font-size:.8rem;color:rgba(255,255,255,.4);line-height:1.5}
+
+/* ── TEAM ── */
+.team{background:var(--white)}
+.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:3rem}
+.team-side{border-radius:var(--r);overflow:hidden;border:1px solid var(--divider)}
+.team-header{padding:1.25rem 1.5rem;display:flex;align-items:center;gap:.75rem}
+.team-header.de{background:var(--dark)}
+.team-header.in{background:var(--offwh);border-bottom:1px solid var(--divider)}
+.team-flag{font-size:1.4rem;line-height:1}
+.th-text h3{font-size:.95rem;font-weight:600;margin-bottom:1px}
+.team-header.de .th-text h3{color:var(--white)}
+.team-header.in .th-text h3{color:var(--dark)}
+.team-header.de .th-text p{color:rgba(255,255,255,.45);font-size:.78rem}
+.team-header.in .th-text p{color:var(--muted);font-size:.78rem}
+.team-body{padding:0 1.5rem 1.5rem}
+.team-member{display:flex;gap:.85rem;align-items:flex-start;padding:1rem 0;border-bottom:1px solid var(--divider)}
+.team-member:last-child{border-bottom:none}
+.tm-avatar{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.82rem;font-weight:600;color:var(--white);flex-shrink:0;font-family:var(--ff-display)}
+.tm-name{font-size:.9rem;font-weight:600;color:var(--dark);margin-bottom:1px}
+.tm-role{font-size:.76rem;color:var(--burg);font-weight:500;margin-bottom:3px}
+.tm-desc{font-size:.78rem;color:var(--muted);line-height:1.55}
+
+/* ── CONTACT SECTION ── */
+.contact{background:var(--offwh);border-top:1px solid var(--divider)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:3rem;align-items:start}
+.contact-form-wrap{background:var(--white);border-radius:var(--r);border:1px solid var(--divider);overflow:hidden}
+.cf-head{background:var(--dark);padding:1.5rem 1.75rem}
+.cf-head h3{font-family:var(--ff-display);font-size:1.2rem;color:var(--white);font-weight:400;margin-bottom:3px}
+.cf-head p{font-size:.82rem;color:rgba(255,255,255,.45)}
+.cf-body{padding:1.75rem}
+.form-row{margin-bottom:1rem}
+.form-row label{display:block;font-size:.78rem;font-weight:600;color:var(--dark);margin-bottom:.35rem}
+.form-row input,.form-row select,.form-row textarea{
+  width:100%;border:1px solid var(--divider);border-radius:7px;
+  padding:.65rem .9rem;font-size:.875rem;font-family:var(--ff-body);
+  color:var(--body);background:var(--white);outline:none;transition:border .2s
+}
+.form-row input:focus,.form-row select:focus,.form-row textarea:focus{border-color:var(--burg)}
+.form-row textarea{resize:vertical;min-height:90px}
+.form-2col{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.form-submit{
+  width:100%;background:var(--burg);color:var(--white);border:none;
+  border-radius:7px;padding:.9rem;font-weight:600;font-size:.9rem;
+  cursor:pointer;font-family:var(--ff-body);transition:background .2s;margin-top:.25rem
+}
+.form-submit:hover{background:var(--crim)}
+.form-note{font-size:.75rem;color:var(--muted);text-align:center;margin-top:.65rem;line-height:1.5}
+
+/* Contact info sidebar */
+.contact-info{display:flex;flex-direction:column;gap:1.25rem}
+.ci-card{background:var(--white);border:1px solid var(--divider);border-radius:var(--r);padding:1.5rem}
+.ci-title{font-size:.78rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--burg);margin-bottom:1rem}
+.ci-person{display:flex;gap:.75rem;align-items:flex-start;margin-bottom:.75rem;padding-bottom:.75rem;border-bottom:1px solid var(--divider)}
+.ci-person:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.ci-avatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:600;color:var(--white);flex-shrink:0;font-family:var(--ff-display)}
+.ci-name{font-size:.88rem;font-weight:600;color:var(--dark);margin-bottom:1px}
+.ci-role{font-size:.76rem;color:var(--muted)}
+.ci-item{display:flex;align-items:center;gap:.6rem;font-size:.85rem;color:var(--body);margin-bottom:.4rem}
+.ci-item a{color:var(--body);text-decoration:none;transition:color .2s}
+.ci-item a:hover{color:var(--burg)}
+.next-steps{background:var(--dark);border-radius:var(--r);padding:1.5rem}
+.ns-title{font-size:.78rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.ns-step{display:flex;gap:.75rem;align-items:flex-start;padding:.6rem 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.ns-step:last-child{border-bottom:none}
+.ns-n{width:22px;height:22px;border-radius:50%;background:var(--burg);color:var(--white);font-size:.72rem;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.ns-text{font-size:.82rem;color:rgba(255,255,255,.55);line-height:1.5}
+.guarantee-strip{background:var(--greenl);border:1px solid rgba(26,82,50,.2);border-radius:8px;padding:1rem 1.25rem;display:flex;gap:.75rem;align-items:flex-start}
+.gs-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px}
+.gs-text{font-size:.82rem;color:var(--green);line-height:1.55;font-weight:500}
+
+/* ── IMPRESSUM ── */
+.impressum{background:var(--dark);padding:3.5rem 2rem}
+.imp-inner{max-width:var(--max);margin:0 auto}
+.imp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.06)}
+.imp-col h4{font-size:.72rem;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:.85rem}
+.imp-col a{display:block;color:rgba(255,255,255,.4);text-decoration:none;font-size:.8rem;margin-bottom:.4rem;transition:color .2s}
+.imp-col a:hover{color:var(--white)}
+.imp-col p{color:rgba(255,255,255,.4);font-size:.8rem;line-height:1.6;margin-bottom:.3rem}
+.imp-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:1.5rem;flex-wrap:wrap;gap:1rem}
+.imp-copy{font-size:.75rem;color:rgba(255,255,255,.25)}
+.imp-parent{font-size:.75rem;color:rgba(255,255,255,.25);text-align:right}
+.imp-parent strong{color:rgba(255,255,255,.45)}
+
+/* ── LEGAL MODALS ── */
+.legal-overlay{position:fixed;inset:0;background:rgba(10,6,18,.9);z-index:500;display:none;align-items:center;justify-content:center;padding:2rem}
+.legal-overlay.open{display:flex}
+.legal-modal{background:var(--white);border-radius:12px;width:100%;max-width:600px;max-height:80vh;overflow-y:auto;animation:fadeUp .25s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.lm-head{position:sticky;top:0;background:var(--dark);padding:1.25rem 1.5rem;display:flex;justify-content:space-between;align-items:center}
+.lm-head h3{font-family:var(--ff-display);color:var(--white);font-size:1.1rem;font-weight:400}
+.lm-close{background:none;border:none;color:rgba(255,255,255,.5);font-size:1.5rem;cursor:pointer;line-height:1}
+.lm-body{padding:1.75rem}
+.lm-body h4{font-size:.9rem;font-weight:600;color:var(--dark);margin:1rem 0 .4rem}
+.lm-body p{font-size:.85rem;color:var(--body);line-height:1.7;margin-bottom:.5rem}
+.lm-body address{font-style:normal;font-size:.85rem;color:var(--body);line-height:1.8}
+
+/* ── MOBILE ── */
+@media(max-width:900px){
+  .hero-inner,.solution-grid,.roi-inner,.cand-wrap,.contact-grid,.team-grid{grid-template-columns:1fr}
+  .hero-contact-card{display:none}
+  .problem-grid,.steps-grid,.why-grid,.imp-grid{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}
+}
+@media(max-width:600px){
+  .problem-grid,.steps-grid,.why-grid,.imp-grid,.form-2col{grid-template-columns:1fr}
+}
+
+/* ── SCROLL ANIMATION ── */
+.fade-up{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<!-- i18n data -->
+<script>
+const T = {
+  de: {
+    banner_text: 'Auf der Suche nach einem Job in Deutschland?',
+    banner_strong: ' Für Kandidaten aus Indien:',
+    banner_link: 'eurodoot.in besuchen ↗',
+    nav_solution: 'Unsere Lösung',
+    nav_process: 'Ablauf',
+    nav_roi: 'ROI-Rechner',
+    nav_why: 'Warum EuroDoot',
+    nav_team: 'Team',
+    nav_contact: 'Kontakt',
+    nav_cta: 'Jetzt anfragen',
+    hero_eyebrow: 'NRW · Logistik · Direktvermittlung aus Indien',
+    hero_h1_a: 'Fachkräfte, die',
+    hero_h1_em: 'wirklich kommen wollen.',
+    hero_h1_b: '',
+    hero_sub: 'Motivierte, vorqualifizierte Arbeitskräfte aus Indien für Ihre Logistik- und Lagerbetriebe in NRW — mit vollständiger Begleitung von der Vorauswahl bis zum ersten Arbeitstag.',
+    hero_btn1: 'Stelle jetzt melden',
+    hero_btn2: 'Ablauf ansehen',
+    hstat1_n: '50+', hstat1_l: 'Kandidaten bereit',
+    hstat2_n: 'NRW', hstat2_l: 'Fokus-Region',
+    hstat3_n: 'A1', hstat3_l: 'Deutsch vor Ankunft',
+    hcc_label: 'Ihr Ansprechpartner',
+    hcc_cta: 'Kostenlos anfragen →',
+    prob_label: 'Das Problem',
+    prob_title: 'Sie suchen — der lokale Markt liefert nicht.',
+    prob_sub: 'Zeitarbeit kostet mehr als die Rechnung zeigt. Ausbildungsplätze bleiben unbesetzt. Und indische Fachkräfte kommen, bleiben und wachsen — weil sie es wollen.',
+    prob1_n: 'Ø 18', prob1_label: 'Krankheitstage pro Jahr', prob1_text: 'Lokale Arbeitskräfte fehlen häufig — Krankheit, Jobwechsel und fehlende Motivation sind Alltag in vielen Betrieben.',
+    prob2_n: '€0', prob2_label: 'Wertschöpfung unbesetzter Stellen', prob2_text: 'Jede unbesetzte Stelle kostet mehr als die Stelle selbst — an Überstunden, Qualitätseinbußen und verpassten Aufträgen.',
+    prob3_n: '~5', prob3_label: 'Krankheitstage — unsere Kandidaten', prob3_text: 'Indische Fachkräfte kommen mit einem klaren Lebensziel nach Deutschland. Das spiegelt sich in Verlässlichkeit, Loyalität und echter Motivation.',
+    sol_label: 'Unsere Lösung',
+    sol_title: 'Direktvermittlung. Rechtssicher. Aus einer Hand.',
+    sol_sub: 'Wir managen den gesamten Prozess — von der Kandidatensuche in Indien bis zur Ankunft in NRW. Sie erhalten fertig vorbereitete Fachkräfte, die vom ersten Tag an einsatzbereit sind.',
+    sol1_title: 'Sourcing & Vorauswahl',
+    sol1_text: 'Unser erfahrenes Team in Delhi mit 16 Jahren Branchenerfahrung identifiziert und prüft Kandidaten persönlich — Qualifikation, Hintergrund, Motivation.',
+    sol2_title: 'Sprachvorbereitung',
+    sol2_text: 'Jeder Kandidat absolviert vor der Ausreise einen zertifizierten A1-Deutschkurs. Kommunikation ist vom ersten Arbeitstag an möglich.',
+    sol3_title: 'Visa & Behörden',
+    sol3_text: 'Wir koordinieren das vollständige Visumverfahren (FEG / Chancenkarte), die Qualifikationsanerkennung (IHK / HWK) und alle behördlichen Schritte.',
+    sol4_title: 'Ankunft & Integration',
+    sol4_text: 'Anmeldung, Bank, Krankenkasse, Steuer-ID — wir begleiten Ihre neuen Mitarbeiter durch die ersten Wochen in NRW. Die indische Community (>50.000 in NRW) tut ihr Übriges.',
+    qp_text: 'Wir haben diesen Weg selbst gegangen — Mitarbeiter aus Indien eingestellt, nach Deutschland geholt, durch die Behörden begleitet. Diese Erfahrung ist das Fundament von EuroDoot.',
+    qp_author: 'EuroDoot Gründungsteam, NRW',
+    qps1_l: 'Jahre Erfahrung vor Ort',
+    qps2_l: 'Kandidaten vorqualifiziert',
+    proc_label: 'Der Ablauf',
+    proc_title: 'Von der Anfrage bis zum ersten Arbeitstag',
+    proc_sub: 'Wir managen alles. Sie führen das Vorstellungsgespräch — und empfangen Ihren neuen Mitarbeiter.',
+    step1_t: 'Briefing & Auftrag', step1_d: 'Sie beschreiben die Stelle, Anforderungen und gewünschten Zeitplan. Wir bestätigen schriftlich mit Einzelauftrag.', step1_dur: '1–3 Tage',
+    step2_t: 'Sourcing Indien', step2_d: 'Unser Delhi-Team aktiviert das Netzwerk — Vorauswahl, Hintergrundprüfung, Zeugniskontrolle, Sprachbewertung.', step2_dur: '2–3 Wochen',
+    step3_t: 'Kandidatenprofile', step3_d: 'Sie erhalten 3–5 geprüfte Profile mit CV, Videovita und Beurteilung. Wir moderieren das Videointerview auf Englisch oder Deutsch.', step3_dur: '1–2 Wochen',
+    step4_t: 'Auswahl & Vertrag', step4_d: 'Sie wählen Ihren Kandidaten. Arbeitsvertrag wird ausgestellt. Alle Behörden- und Visumschritte beginnen sofort.', step4_dur: 'Sofort',
+    step5_t: 'Visa & Anerkennung', step5_d: 'Wir koordinieren das vollständige Visumverfahren und die Qualifikationsanerkennung. Unser Immigrationsanwalt begleitet komplexe Fälle.', step5_dur: '8–12 Wochen',
+    step6_t: 'Ankunft & 1. Arbeitstag', step6_d: 'Ihr Mitarbeiter kommt in NRW an — vollständig betreut. Erstes Gespräch in der Agentur für Arbeit, Versicherung, Bank, Anmeldung.', step6_dur: 'Gesamtdauer: 14–20 Wochen',
+    roi_label: 'ROI-Rechner',
+    roi_title: 'Was kostet Sie der Fachkräftemangel wirklich?',
+    roi_sub: 'Berechnen Sie Ihre Ersparnis — auf Basis Ihrer eigenen Zahlen. Kein Verkaufsgespräch, nur Mathematik.',
+    roi_c1: 'Bruttomonatsgehalt der Stelle',
+    roi_c2: 'Ihr aktueller Zeitarbeit-Stundensatz',
+    roi_note1: '40 Std./Woche · 52 Wochen · 3 Jahre',
+    roi_note2: '30% Arbeitgeberanteil · 3 Jahre Gesamtkosten',
+    roi_b1: 'Zeitarbeit über 3 Jahre',
+    roi_b2: 'EuroDoot Direktanstellung (3 J.)',
+    roi_b3: 'Ihre Ersparnis',
+    roi_d1: 'Gesamtkosten bei Ihrem Stundensatz',
+    roi_d2: 'Provision + Gehalt + Arbeitgeberanteil',
+    roi_d3: 'Pro Mitarbeiter. Für immer.',
+    why_label: 'Warum EuroDoot',
+    why_title: 'NRW. Logistik. Sonst nichts.',
+    why_sub: 'Wir machen nicht alles für alle. Wir kennen diesen Markt, diese Region und diese Kandidaten besser als jeder Generalist.',
+    why1_t: 'NRW-Spezialisten', why1_d: 'Wir leben und arbeiten in NRW. Wir kennen die Arbeitgeber, die Behörden und die indische Community von über 50.000 Menschen — persönlich.',
+    why2_t: 'Nur Logistik', why2_d: 'Ein Sektor, maximale Tiefe. Von der Lagerfachkraft bis zur Ausbildung — wir wissen, was Logistikbetriebe brauchen.',
+    why3_t: 'Selbst erlebt', why3_d: 'Unser Gründungsteam hat Inder selbst eingestellt, nach Deutschland geholt und durch jede Behörde begleitet. Kein Theorieprojekt.',
+    why4_t: 'Immigrationsrecht', why4_d: 'Wir arbeiten mit einem qualifizierten Immigrationsanwalt zusammen — für komplexe Visa-Fälle und rechtliche Sicherheit für beide Seiten.',
+    why5_t: '3 Monate Garantie', why5_d: 'Verlässt ein Kandidat innerhalb der ersten 3 Monate, stellen wir kostenfrei einen Ersatzkandidaten. Ohne Wenn und Aber.',
+    why6_t: 'Direktanstellung', why6_d: 'Keine Zeitarbeit, kein AÜG — Ihre neuen Mitarbeiter sind von Anfang an fest in Ihrem Betrieb. Das schafft Loyalität auf beiden Seiten.',
+    cand_label: 'Unsere Kandidaten',
+    cand_title: 'Wer kommt zu Ihnen — und warum es funktioniert',
+    cand_sub: 'Kein anonymer CV-Service. Jeder Kandidat ist persönlich geprüft, vorbereitet und motiviert. Hier ist das Profil.',
+    ct_col1: 'Kriterium', ct_col2: 'Standard', ct_col3: 'Ihr Vorteil',
+    cr1: ['Ausbildung', 'Mind. 10+2 (Realschule), ITI oder Diplom', 'Qualifizierte Basis'],
+    cr2: ['Alter', '22–35 Jahre', 'Langfristige Bindung wahrscheinlich'],
+    cr3: ['Deutschkenntnisse', 'A1 zertifiziert vor Ankunft', 'Kommunikation ab Tag 1'],
+    cr4: ['Hintergrundprüfung', 'Polizeiliches Führungszeugnis, Gesundheitscheck, Zeugniskontrolle', 'Keine Überraschungen nach der Einreise'],
+    cr5: ['Motivation', 'Persönliches Interview + Videovita auf Englisch', 'Nur echte Freiwillige mit Lebensziel'],
+    cr6: ['Krankenstand', '~5 Tage/Jahr', '13 Extra-Arbeitstage vs. Durchschnitt'],
+    cr7: ['NRW-Community', '>50.000 Inder bereits in NRW', 'Integration von Anfang an erleichtert'],
+    legal_title: 'Rechtlicher Rahmen — wir managen alles',
+    lp1_n: 'Fachkräfteeinwanderungsgesetz (FEG)', lp1_d: 'Ermöglicht seit 2020 die gezielte Zuwanderung aus Drittstaaten. Logistikberufe sind ausdrücklich eingeschlossen.',
+    lp2_n: 'Chancenkarte (§ 20a AufenthG)', lp2_d: 'Seit 2024 können qualifizierte Bewerber zur Jobsuche einreisen — der Prozess wurde erheblich beschleunigt.',
+    lp3_n: 'Anerkennungsverfahren IHK / HWK', lp3_d: 'Wir koordinieren die Anerkennung indischer Berufsabschlüsse mit der zuständigen Stelle.',
+    lp4_n: 'Direktanstellung — kein AÜG', lp4_d: 'Ihre neuen Mitarbeiter sind direkt bei Ihnen angestellt. Volle Rechte, keine Zeitarbeitsbeschränkungen.',
+    team_label: 'Das Team',
+    team_title: 'Professionals auf beiden Seiten — für jeden Schritt',
+    team_sub: 'EuroDoot ist kein Ein-Mann-Projekt. Wir haben erfahrene Fachleute, die jeden Aspekt der Vermittlung abdecken — in Deutschland und in Indien.',
+    team_de: '🇩🇪', team_de_h: 'Deutschland-Team — NRW', team_de_sub: 'Arbeitgeber-Beziehungen, Visa, Compliance, Integration',
+    team_in: '🇮🇳', team_in_h: 'Indien-Team — Delhi', team_in_sub: 'Sourcing, Screening, Vorbereitung, Begleitung',
+    m1_name: 'Sameer Saran', m1_role: 'Geschäftsleitung, Deutschland', m1_desc: 'Gründer & Geschäftsführer. Betreibt Saran Capital Holdings UG in NRW, hat Mitarbeiter aus Indien eingestellt, integriert und durch jede Behörde begleitet.',
+    m2_name: 'Zanda Strode', m2_role: 'Vertriebsleitung, Deutschland', m2_desc: 'Verantwortlich für Kundenbeziehungen und Auftragsmanagement mit deutschen Logistikunternehmen in NRW.',
+    m3_name: 'Kristine Sveta', m3_role: 'Industry Advisor, Logistik', m3_desc: 'Bringt tiefes Insiderwissen aus der Logistikbranche ein — kennt die Betriebe, die Anforderungen und die tägliche Realität in Lagern in NRW.',
+    m4_name: 'Ieva Strode', m4_role: 'HR & Compliance', m4_desc: 'Kennt das deutsche HR-Compliance-Umfeld: Agentur für Arbeit, Aufenthaltsgesetz, Arbeitsrecht und die spezifischen Pflichten bei der Beschäftigung von Drittstaatsangehörigen.',
+    m5_name: 'Sanchit Saran', m5_role: 'Geschäftsleitung, Indien', m5_desc: '16 Jahre Branchenerfahrung. Leitet das Sourcing-Netzwerk in Indien und koordiniert mit seinem Team die vollständige Kandidatenvorbereitung von Delhi aus.',
+    m6_name: 'Soni Kumari', m6_role: 'Back Office', m6_desc: 'Verantwortlich für Dokumentenmanagement, Koordination mit Behörden und administrativen Support für alle laufenden Vermittlungsvorgänge.',
+    contact_label: 'Kontakt',
+    contact_title: 'Sprechen wir.',
+    contact_sub: 'Senden Sie uns Ihre Stellenanforderung — wir antworten innerhalb von 24 Stunden mit einem konkreten Vorschlag.',
+    cf_h3: 'Stelle melden', cf_p: 'Kein Verkaufsgespräch — einfach Bedarf schildern, wir kümmern uns um den Rest.',
+    fl_company: 'Unternehmen *', fl_contact: 'Ansprechpartner *', fl_email: 'E-Mail *', fl_phone: 'Telefon',
+    fl_type: 'Art der Stelle *', fl_type_opt0: 'Ausbildungsplatz', fl_type_opt1: 'Vollzeit-Stelle (Direktanstellung)', fl_type_opt2: 'Mehrere Stellen',
+    fl_msg: 'Ihre Anforderungen & Wünsche',
+    fl_msg_ph: 'Stelle, Qualifikationsanforderungen, gewünschter Starttermin, Anzahl der Kandidaten...',
+    fl_submit: 'Anfrage absenden →',
+    fl_note: 'Antwort innerhalb von 24 Stunden · Keine Weiterleitung an Dritte · Kein Spam',
+    ci_title: 'Ihre direkten Ansprechpartner',
+    ci_title2: 'Direkt erreichen',
+    ci_phone: '+49 152 04084556',
+    ci_email: 'eurodoot.de@gmail.com',
+    ns_title: 'Was als Nächstes passiert',
+    ns1: 'Wir antworten innerhalb von 24 Stunden',
+    ns2: 'Kurzes Telefonat (30 Min.) zur Abstimmung',
+    ns3: 'Erste Kandidatenprofile in 2–3 Wochen',
+    ns4: 'Videointerviews mit Ihrem Team',
+    ns5: 'Vertragsschluss & Start',
+    guarantee: 'Kostenlose Nachbesetzung innerhalb von 3 Monaten, falls ein Kandidat vor Ablauf der Probezeit ausscheidet.',
+    imp_nav: 'Navigation',
+    imp_legal: 'Rechtliches',
+    imp_contact_h: 'Kontakt',
+    imp_company_h: 'Unternehmen',
+    imp_links: ['Unsere Lösung','Ablauf','ROI-Rechner','Team','Kontakt'],
+    imp_legal_links: ['Impressum','Datenschutz','AGB'],
+    imp_copy: '© 2025 EuroDoot',
+    imp_parent: 'Eine Marke der',
+    lang_btn: '🇬🇧 English',
+    impressum_title: 'Impressum',
+    impressum_body: `<h4>Angaben gemäß § 5 TMG</h4>
+<address>Saran Capital Holdings UG (haftungsbeschränkt)<br>Boschstraße 16<br>47533 Kleve<br>Deutschland</address>
+<h4>Handelsregister</h4><p>Amtsgericht Kleve · HRB 18563</p>
+<h4>Umsatzsteuer-Identifikationsnummer</h4><p>USt-IdNr.: DE358683746<br>gemäß § 27a Umsatzsteuergesetz</p>
+<h4>Kontakt</h4><p>E-Mail: eurodoot.de@gmail.com<br>Telefon: +49 152 04084556</p>
+<h4>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h4><p>Sameer Saran, Boschstraße 16, 47533 Kleve</p>
+<h4>Haftungsausschluss</h4><p>Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.</p>`,
+    datenschutz_title: 'Datenschutzerklärung',
+    datenschutz_body: `<h4>1. Verantwortlicher</h4>
+<p>Saran Capital Holdings UG (haftungsbeschränkt), Boschstraße 16, 47533 Kleve. E-Mail: eurodoot.de@gmail.com</p>
+<h4>2. Erhebung und Speicherung personenbezogener Daten</h4>
+<p>Beim Besuch dieser Website werden durch den Hosting-Anbieter automatisch Informationen in sogenannten Server-Log-Dateien gespeichert (IP-Adresse, Browsertyp, Betriebssystem, Referrer-URL, Datum/Uhrzeit). Diese Daten sind nicht bestimmten Personen zuordenbar und dienen der technischen Bereitstellung der Website.</p>
+<h4>3. Kontaktformular</h4>
+<p>Wenn Sie uns über das Kontaktformular eine Anfrage zukommen lassen, werden Ihre Angaben (Name, E-Mail, Telefon, Nachricht) zur Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO. Ihre Daten werden nicht ohne Ihre Einwilligung an Dritte weitergegeben.</p>
+<h4>4. Ihre Rechte</h4>
+<p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer personenbezogenen Daten sowie das Recht auf Datenübertragbarkeit. Wenden Sie sich dazu an: eurodoot.de@gmail.com</p>
+<h4>5. Beschwerderecht</h4>
+<p>Sie haben das Recht, sich bei der zuständigen Aufsichtsbehörde für Datenschutz zu beschweren. Die zuständige Behörde ist der Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen.</p>`
+  },
+  en: {
+    banner_text: 'Looking for a job in Germany?',
+    banner_strong: ' For candidates from India:',
+    banner_link: 'Visit eurodoot.in ↗',
+    nav_solution: 'Our Service',
+    nav_process: 'Process',
+    nav_roi: 'ROI Calculator',
+    nav_why: 'Why EuroDoot',
+    nav_team: 'Team',
+    nav_contact: 'Contact',
+    nav_cta: 'Get in touch',
+    hero_eyebrow: 'NRW · Logistics · Direct Placement from India',
+    hero_h1_a: 'Skilled workers who',
+    hero_h1_em: 'genuinely want to come.',
+    hero_h1_b: '',
+    hero_sub: 'Motivated, pre-qualified professionals from India for your logistics and warehouse operations in NRW — complete support from candidate sourcing to first day at work.',
+    hero_btn1: 'Submit a vacancy',
+    hero_btn2: 'See the process',
+    hstat1_n: '50+', hstat1_l: 'Candidates ready',
+    hstat2_n: 'NRW', hstat2_l: 'Our focus region',
+    hstat3_n: 'A1', hstat3_l: 'German before arrival',
+    hcc_label: 'Your contact person',
+    hcc_cta: 'Get in touch — no obligation →',
+    prob_label: 'The Problem',
+    prob_title: 'You are looking — the local market is not delivering.',
+    prob_sub: 'Agency workers cost more than the invoice shows. Apprenticeship places go unfilled. Indian professionals come, stay and grow — because they want to.',
+    prob1_n: 'Ø 18', prob1_label: 'Sick days per year', prob1_text: 'Local workers frequently absent — illness, job-hopping and low motivation are common in many operations.',
+    prob2_n: '€0', prob2_label: 'Value generated by unfilled roles', prob2_text: 'Every unfilled position costs more than the role itself — in overtime, quality loss and missed orders.',
+    prob3_n: '~5', prob3_label: 'Sick days — our candidates', prob3_text: 'Indian professionals come to Germany with one clear life goal. That shows in reliability, loyalty and genuine commitment.',
+    sol_label: 'Our Service',
+    sol_title: 'Direct placement. Legally compliant. All from one source.',
+    sol_sub: 'We manage the entire process — from candidate search in India to arrival in NRW. You receive fully prepared professionals, ready to work from day one.',
+    sol1_title: 'Sourcing & Pre-selection',
+    sol1_text: 'Our experienced Delhi team with 16 years of industry experience personally identifies and checks candidates — qualifications, background, motivation.',
+    sol2_title: 'Language preparation',
+    sol2_text: 'Every candidate completes a certified A1 German course before departure. Communication is possible from the very first working day.',
+    sol3_title: 'Visa & Authorities',
+    sol3_text: 'We coordinate the full visa process (FEG / Chancenkarte), qualification recognition (IHK / HWK) and all official steps.',
+    sol4_title: 'Arrival & Integration',
+    sol4_text: 'Registration, bank, health insurance, tax ID — we support your new employees through the first weeks in NRW. The Indian community (>50,000 in NRW) does the rest.',
+    qp_text: 'We have done this ourselves — hired people from India, brought them to Germany, navigated every authority alongside them. That experience is the foundation of EuroDoot.',
+    qp_author: 'EuroDoot founding team, NRW',
+    qps1_l: 'Years of local experience',
+    qps2_l: 'Candidates pre-qualified',
+    proc_label: 'The Process',
+    proc_title: 'From enquiry to first day at work',
+    proc_sub: 'We manage everything. You conduct the interview — and welcome your new employee.',
+    step1_t: 'Briefing & Order', step1_d: 'You describe the role, requirements and timeline. We confirm in writing with a formal service order.', step1_dur: '1–3 days',
+    step2_t: 'Sourcing India', step2_d: 'Our Delhi team activates the network — pre-selection, background check, certificate verification, language assessment.', step2_dur: '2–3 weeks',
+    step3_t: 'Candidate profiles', step3_d: 'You receive 3–5 verified profiles with CV, video introduction and our assessment. We moderate the video interview in English or German.', step3_dur: '1–2 weeks',
+    step4_t: 'Selection & Contract', step4_d: 'You choose your candidate. Employment contract is issued. All visa and authority steps begin immediately.', step4_dur: 'Immediate',
+    step5_t: 'Visa & Recognition', step5_d: 'We coordinate the complete visa process and qualification recognition. Our immigration lawyer handles complex cases.', step5_dur: '8–12 weeks',
+    step6_t: 'Arrival & Day 1', step6_d: 'Your new employee arrives in NRW — fully supported. Registration, insurance, bank account, local authority appointments.', step6_dur: 'Total: 14–20 weeks',
+    roi_label: 'ROI Calculator',
+    roi_title: 'What does the skills shortage really cost you?',
+    roi_sub: 'Calculate your savings — based on your own numbers. No sales conversation, just maths.',
+    roi_c1: 'Gross monthly salary for the role',
+    roi_c2: 'Your current agency worker hourly rate',
+    roi_note1: '40 hrs/week · 52 weeks · 3 years',
+    roi_note2: '30% employer contributions · 3-year total cost',
+    roi_b1: 'Agency workers over 3 years',
+    roi_b2: 'EuroDoot direct hire (3 yrs)',
+    roi_b3: 'Your saving',
+    roi_d1: 'Total cost at your hourly rate',
+    roi_d2: 'Placement fee + salary + employer contributions',
+    roi_d3: 'Per employee. For good.',
+    why_label: 'Why EuroDoot',
+    why_title: 'NRW. Logistics. Nothing else.',
+    why_sub: 'We do not do everything for everyone. We know this market, this region and these candidates better than any generalist.',
+    why1_t: 'NRW specialists', why1_d: 'We live and work in NRW. We know the employers, the authorities and the 50,000-strong Indian community — personally.',
+    why2_t: 'Logistics only', why2_d: 'One sector, maximum depth. From warehouse operatives to apprenticeships — we know exactly what logistics businesses need.',
+    why3_t: 'Done it ourselves', why3_d: 'Our founding team has hired Indians, brought them to Germany and supported them through every authority. No theory project.',
+    why4_t: 'Immigration law', why4_d: 'We work with a qualified immigration lawyer — for complex visa cases and legal certainty for both sides.',
+    why5_t: '3-month guarantee', why5_d: 'If a candidate leaves within the first 3 months, we provide a free replacement. No conditions, no debate.',
+    why6_t: 'Direct employment', why6_d: 'No agency staffing, no AÜG — your new employees are directly on your payroll from day one. That creates loyalty on both sides.',
+    cand_label: 'Our Candidates',
+    cand_title: 'Who comes to you — and why it works',
+    cand_sub: 'No anonymous CV service. Every candidate is personally verified, prepared and motivated. Here is the profile.',
+    ct_col1: 'Criterion', ct_col2: 'Standard', ct_col3: 'Your advantage',
+    cr1: ['Education', 'Minimum 10+2 (secondary), ITI or Diploma', 'Qualified foundation'],
+    cr2: ['Age', '22–35 years', 'Long-term commitment likely'],
+    cr3: ['German language', 'A1 certified before arrival', 'Communication from day 1'],
+    cr4: ['Background check', 'Police clearance, health certificate, degree verification', 'No surprises after entry'],
+    cr5: ['Motivation', 'Personal interview + video introduction in English', 'Only genuine volunteers with a life goal'],
+    cr6: ['Sick days', '~5 days/year', '13 extra working days vs. average'],
+    cr7: ['NRW community', '>50,000 Indians already in NRW', 'Integration facilitated from day one'],
+    legal_title: 'Legal framework — we manage everything',
+    lp1_n: 'Fachkräfteeinwanderungsgesetz (FEG)', lp1_d: 'Enables targeted immigration from third countries since 2020. Logistics occupations explicitly included.',
+    lp2_n: 'Chancenkarte (§ 20a AufenthG)', lp2_d: 'Since 2024 qualified applicants can enter Germany to look for work — the process has been significantly accelerated.',
+    lp3_n: 'Recognition procedure IHK / HWK', lp3_d: 'We coordinate the recognition of Indian professional qualifications with the competent authority.',
+    lp4_n: 'Direct employment — not AÜG', lp4_d: 'Your new employees are directly on your payroll. Full rights, no temporary staffing restrictions.',
+    team_label: 'The Team',
+    team_title: 'Professionals on both sides — for every step',
+    team_sub: 'EuroDoot is not a one-person project. We have experienced professionals covering every aspect of the placement — in Germany and in India.',
+    team_de: '🇩🇪', team_de_h: 'Germany Team — NRW', team_de_sub: 'Employer relations, visa, compliance, integration',
+    team_in: '🇮🇳', team_in_h: 'India Team — Delhi', team_in_sub: 'Sourcing, screening, preparation, candidate support',
+    m1_name: 'Sameer Saran', m1_role: 'Managing Director, Germany', m1_desc: 'Founder & MD. Operates Saran Capital Holdings UG in NRW, has personally hired from India, managed immigration and settled employees in Germany.',
+    m2_name: 'Zanda Strode', m2_role: 'Sales Director, Germany', m2_desc: 'Responsible for client relationships and order management with German logistics companies in NRW.',
+    m3_name: 'Kristine Sveta', m3_role: 'Industry Advisor, Logistics', m3_desc: 'Brings deep insider knowledge from the logistics sector — knows the operations, requirements and daily reality of warehouses in NRW.',
+    m4_name: 'Ieva Strode', m4_role: 'HR & Compliance', m4_desc: 'Expert in German HR compliance: Agentur für Arbeit processes, Aufenthaltsgesetz obligations, employment law and the specific duties when employing third-country nationals.',
+    m5_name: 'Sanchit Saran', m5_role: 'Managing Director, India', m5_desc: '16 years of industry experience. Leads the sourcing network in India and coordinates full candidate preparation from Delhi.',
+    m6_name: 'Soni Kumari', m6_role: 'Back Office', m6_desc: 'Responsible for document management, coordination with authorities and administrative support for all active placement cases.',
+    contact_label: 'Contact',
+    contact_title: "Let's talk.",
+    contact_sub: 'Send us your vacancy — we respond within 24 hours with a concrete proposal.',
+    cf_h3: 'Submit a vacancy', cf_p: 'No sales conversation — just describe your need and we take care of the rest.',
+    fl_company: 'Company *', fl_contact: 'Contact person *', fl_email: 'Email *', fl_phone: 'Phone',
+    fl_type: 'Type of vacancy *', fl_type_opt0: 'Apprenticeship (Ausbildung)', fl_type_opt1: 'Full-time direct hire', fl_type_opt2: 'Multiple positions',
+    fl_msg: 'Your requirements & wishes',
+    fl_msg_ph: 'Role, qualification requirements, desired start date, number of candidates...',
+    fl_submit: 'Submit enquiry →',
+    fl_note: 'Response within 24 hours · Not passed to third parties · No spam',
+    ci_title: 'Your direct contacts',
+    ci_title2: 'Reach us directly',
+    ci_phone: '+49 152 04084556',
+    ci_email: 'eurodoot.de@gmail.com',
+    ns_title: 'What happens next',
+    ns1: 'We respond within 24 hours',
+    ns2: 'Short call (30 min.) to align on requirements',
+    ns3: 'First candidate profiles within 2–3 weeks',
+    ns4: 'Video interviews with your team',
+    ns5: 'Contract signing & start',
+    guarantee: 'Free replacement within 3 months if a candidate leaves before the end of their probation period.',
+    imp_nav: 'Navigation',
+    imp_legal: 'Legal',
+    imp_contact_h: 'Contact',
+    imp_company_h: 'Company',
+    imp_links: ['Our Service','Process','ROI Calculator','Team','Contact'],
+    imp_legal_links: ['Legal Notice','Privacy Policy','Terms'],
+    imp_copy: '© 2025 EuroDoot',
+    imp_parent: 'A brand of',
+    lang_btn: '🇩🇪 Deutsch',
+    impressum_title: 'Legal Notice (Impressum)',
+    impressum_body: `<h4>Information pursuant to § 5 TMG</h4>
+<address>Saran Capital Holdings UG (limited liability)<br>Boschstraße 16<br>47533 Kleve<br>Germany</address>
+<h4>Commercial Register</h4><p>Amtsgericht Kleve · HRB 18563</p>
+<h4>VAT Identification Number</h4><p>USt-IdNr.: DE358683746<br>pursuant to § 27a Umsatzsteuergesetz</p>
+<h4>Contact</h4><p>Email: eurodoot.de@gmail.com<br>Phone: +49 152 04084556</p>
+<h4>Person responsible for content pursuant to § 55 (2) RStV</h4><p>Sameer Saran, Boschstraße 16, 47533 Kleve</p>`,
+    datenschutz_title: 'Privacy Policy',
+    datenschutz_body: `<h4>1. Data Controller</h4>
+<p>Saran Capital Holdings UG (limited liability), Boschstraße 16, 47533 Kleve. Email: eurodoot.de@gmail.com</p>
+<h4>2. Collection of personal data</h4>
+<p>When visiting this website, server log files are automatically stored by the hosting provider (IP address, browser type, OS, referrer URL, date/time). This data cannot be attributed to specific individuals and is used only for technical provision of the website.</p>
+<h4>3. Contact form</h4>
+<p>If you send us an enquiry via the contact form, your details (name, email, phone, message) are stored for processing and follow-up. Legal basis: Art. 6(1)(b) GDPR. Your data will not be passed to third parties without your consent.</p>
+<h4>4. Your rights</h4>
+<p>You have the right to information, rectification, deletion and restriction of processing of your personal data, as well as the right to data portability. Contact: eurodoot.de@gmail.com</p>`
+  }
+};
+
+let lang = 'de';
+
+function applyLang(l) {
+  lang = l;
+  const t = T[l];
+  document.documentElement.lang = l;
+  // Apply all data-i18n attributes
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key] !== undefined) el.textContent = t[key];
+  });
+  // Apply placeholders
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+    const key = el.getAttribute('data-i18n-ph');
+    if (t[key] !== undefined) el.placeholder = t[key];
+  });
+  // Apply innerHTML for rich content
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.getAttribute('data-i18n-html');
+    if (t[key] !== undefined) el.innerHTML = t[key];
+  });
+  // Table rows
+  ['cr1','cr2','cr3','cr4','cr5','cr6','cr7'].forEach(k => {
+    const el = document.getElementById(k);
+    if(el && t[k]) {
+      el.children[0].textContent = t[k][0];
+      el.children[1].textContent = t[k][1];
+      el.children[2].textContent = t[k][2];
+    }
+  });
+}
+
+function toggleLang() {
+  applyLang(lang === 'de' ? 'en' : 'de');
+}
+</script>
+
+<!-- CANDIDATE BANNER -->
+<div class="cand-banner">
+  <div class="cand-inner">
+    <p><strong data-i18n="banner_strong">Auf der Suche nach einem Job in Deutschland?</strong> <span data-i18n="banner_text"> Für Kandidaten aus Indien:</span></p>
+    <a href="https://eurodoot.in" class="cand-link" target="_blank" data-i18n="banner_link">eurodoot.in besuchen ↗</a>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">Euro<span>Doot</span></a>
+    <ul class="nav-links">
+      <li><a href="#solution" data-i18n="nav_solution">Unsere Lösung</a></li>
+      <li><a href="#process" data-i18n="nav_process">Ablauf</a></li>
+      <li><a href="#roi" data-i18n="nav_roi">ROI-Rechner</a></li>
+      <li><a href="#why" data-i18n="nav_why">Warum EuroDoot</a></li>
+      <li><a href="#team" data-i18n="nav_team">Team</a></li>
+      <li><a href="#contact" data-i18n="nav_contact">Kontakt</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="tel:+4915204084556" class="nav-phone">+49 152 04084556</a>
+      <button class="lang-btn" onclick="toggleLang()" data-i18n="lang_btn">🇬🇧 English</button>
+      <a href="#contact" class="nav-cta" data-i18n="nav_cta">Jetzt anfragen</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-eyebrow" data-i18n="hero_eyebrow">NRW · Logistik · Direktvermittlung aus Indien</div>
+      <h1>
+        <span data-i18n="hero_h1_a">Fachkräfte, die</span><br>
+        <em data-i18n="hero_h1_em">wirklich kommen wollen.</em>
+      </h1>
+      <p class="hero-sub" data-i18n="hero_sub">Motivierte, vorqualifizierte Arbeitskräfte aus Indien für Ihre Logistik- und Lagerbetriebe in NRW — mit vollständiger Begleitung von der Vorauswahl bis zum ersten Arbeitstag.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary" data-i18n="hero_btn1">Stelle jetzt melden</a>
+        <a href="#process" class="btn btn-ghost" data-i18n="hero_btn2">Ablauf ansehen</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><span class="hstat-n" data-i18n="hstat1_n">50+</span><span class="hstat-l" data-i18n="hstat1_l">Kandidaten bereit</span></div>
+        <div class="hstat"><span class="hstat-n" data-i18n="hstat2_n">NRW</span><span class="hstat-l" data-i18n="hstat2_l">Fokus-Region</span></div>
+        <div class="hstat"><span class="hstat-n" data-i18n="hstat3_n">A1</span><span class="hstat-l" data-i18n="hstat3_l">Deutsch vor Ankunft</span></div>
+      </div>
+    </div>
+    <!-- HAPEKO-style named contact card -->
+    <div class="hero-contact-card fade-up">
+      <div class="hcc-label" data-i18n="hcc_label">Ihr Ansprechpartner</div>
+      <div class="hcc-person">
+        <div class="hcc-avatar" style="background:#8B1A3A">SS</div>
+        <div>
+          <div class="hcc-name">Sameer Saran</div>
+          <div class="hcc-role" data-i18n="m1_role">Geschäftsleitung, Deutschland</div>
+        </div>
+      </div>
+      <div class="hcc-contacts">
+        <div class="hcc-row">
+          <span class="hcc-icon">📞</span>
+          <a href="tel:+4915204084556" class="hcc-val">+49 152 04084556</a>
+        </div>
+        <div class="hcc-row">
+          <span class="hcc-icon">✉️</span>
+          <a href="mailto:eurodoot.de@gmail.com" class="hcc-val">eurodoot.de@gmail.com</a>
+        </div>
+        <div class="hcc-row">
+          <span class="hcc-icon">📍</span>
+          <span class="hcc-val">Kleve, NRW, Deutschland</span>
+        </div>
+      </div>
+      <a href="#contact" class="hcc-cta" data-i18n="hcc_cta">Kostenlos anfragen →</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="problem" id="problem">
+  <div class="container">
+    <span class="sec-label" data-i18n="prob_label">Das Problem</span>
+    <h2 class="sec-title" data-i18n="prob_title">Sie suchen — der lokale Markt liefert nicht.</h2>
+    <p class="sec-sub" data-i18n="prob_sub">Zeitarbeit kostet mehr als die Rechnung zeigt. Ausbildungsplätze bleiben unbesetzt. Und indische Fachkräfte kommen, bleiben und wachsen — weil sie es wollen.</p>
+    <div class="problem-grid">
+      <div class="prob-card fade-up">
+        <div class="prob-num" data-i18n="prob1_n">Ø 18</div>
+        <div class="prob-label" data-i18n="prob1_label">Krankheitstage pro Jahr</div>
+        <div class="prob-text" data-i18n="prob1_text">Lokale Arbeitskräfte fehlen häufig — Krankheit, Jobwechsel und fehlende Motivation sind Alltag in vielen Betrieben.</div>
+      </div>
+      <div class="prob-card fade-up">
+        <div class="prob-num" data-i18n="prob2_n">€0</div>
+        <div class="prob-label" data-i18n="prob2_label">Wertschöpfung unbesetzter Stellen</div>
+        <div class="prob-text" data-i18n="prob2_text">Jede unbesetzte Stelle kostet mehr als die Stelle selbst — an Überstunden, Qualitätseinbußen und verpassten Aufträgen.</div>
+      </div>
+      <div class="prob-card fade-up">
+        <div class="prob-num" data-i18n="prob3_n">~5</div>
+        <div class="prob-label" data-i18n="prob3_label">Krankheitstage — unsere Kandidaten</div>
+        <div class="prob-text" data-i18n="prob3_text">Indische Fachkräfte kommen mit einem klaren Lebensziel nach Deutschland. Das spiegelt sich in Verlässlichkeit, Loyalität und echter Motivation.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section class="solution" id="solution">
+  <div class="container">
+    <span class="sec-label" data-i18n="sol_label">Unsere Lösung</span>
+    <div class="solution-grid">
+      <div>
+        <h2 class="sec-title" data-i18n="sol_title">Direktvermittlung. Rechtssicher. Aus einer Hand.</h2>
+        <p class="sec-sub" data-i18n="sol_sub">Wir managen den gesamten Prozess — von der Kandidatensuche in Indien bis zur Ankunft in NRW.</p>
+        <div class="solution-cards" style="margin-top:2rem">
+          <div class="sol-card fade-up">
+            <div class="sol-num">01</div>
+            <div><div class="sol-title" data-i18n="sol1_title">Sourcing & Vorauswahl</div><div class="sol-text" data-i18n="sol1_text">Unser erfahrenes Team in Delhi mit 16 Jahren Branchenerfahrung identifiziert und prüft Kandidaten persönlich.</div></div>
+          </div>
+          <div class="sol-card fade-up">
+            <div class="sol-num">02</div>
+            <div><div class="sol-title" data-i18n="sol2_title">Sprachvorbereitung</div><div class="sol-text" data-i18n="sol2_text">Jeder Kandidat absolviert vor der Ausreise einen zertifizierten A1-Deutschkurs.</div></div>
+          </div>
+          <div class="sol-card fade-up">
+            <div class="sol-num">03</div>
+            <div><div class="sol-title" data-i18n="sol3_title">Visa & Behörden</div><div class="sol-text" data-i18n="sol3_text">Wir koordinieren das vollständige Visumverfahren, Qualifikationsanerkennung und alle behördlichen Schritte.</div></div>
+          </div>
+          <div class="sol-card fade-up">
+            <div class="sol-num">04</div>
+            <div><div class="sol-title" data-i18n="sol4_title">Ankunft & Integration</div><div class="sol-text" data-i18n="sol4_text">Anmeldung, Bank, Krankenkasse, Steuer-ID — wir begleiten Ihre neuen Mitarbeiter durch die ersten Wochen.</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="quote-panel fade-up">
+        <p class="qp-text" data-i18n="qp_text">Wir haben diesen Weg selbst gegangen — Mitarbeiter aus Indien eingestellt, nach Deutschland geholt, durch die Behörden begleitet. Diese Erfahrung ist das Fundament von EuroDoot.</p>
+        <p class="qp-author" data-i18n="qp_author">EuroDoot Gründungsteam, NRW</p>
+        <div class="qp-stats">
+          <div class="qps"><span class="qps-n">15+</span><span class="qps-l" data-i18n="qps1_l">Jahre Erfahrung vor Ort</span></div>
+          <div class="qps"><span class="qps-n">50+</span><span class="qps-l" data-i18n="qps2_l">Kandidaten vorqualifiziert</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="container">
+    <span class="sec-label" style="color:rgba(255,209,102,.7)" data-i18n="proc_label">Der Ablauf</span>
+    <h2 class="sec-title" data-i18n="proc_title">Von der Anfrage bis zum ersten Arbeitstag</h2>
+    <p class="sec-sub" data-i18n="proc_sub">Wir managen alles. Sie führen das Vorstellungsgespräch — und empfangen Ihren neuen Mitarbeiter.</p>
+    <div class="steps-grid">
+      <div class="step-cell fade-up"><div class="step-n">1</div><div class="step-title" data-i18n="step1_t">Briefing & Auftrag</div><div class="step-text" data-i18n="step1_d">Sie beschreiben die Stelle, Anforderungen und gewünschten Zeitplan. Wir bestätigen schriftlich.</div><div class="step-dur" data-i18n="step1_dur">1–3 Tage</div></div>
+      <div class="step-cell fade-up"><div class="step-n">2</div><div class="step-title" data-i18n="step2_t">Sourcing Indien</div><div class="step-text" data-i18n="step2_d">Unser Delhi-Team aktiviert das Netzwerk — Vorauswahl, Hintergrundprüfung, Zeugniskontrolle.</div><div class="step-dur" data-i18n="step2_dur">2–3 Wochen</div></div>
+      <div class="step-cell fade-up"><div class="step-n">3</div><div class="step-title" data-i18n="step3_t">Kandidatenprofile</div><div class="step-text" data-i18n="step3_d">Sie erhalten 3–5 geprüfte Profile mit CV und Videovita. Wir moderieren das Videointerview.</div><div class="step-dur" data-i18n="step3_dur">1–2 Wochen</div></div>
+      <div class="step-cell fade-up"><div class="step-n">4</div><div class="step-title" data-i18n="step4_t">Auswahl & Vertrag</div><div class="step-text" data-i18n="step4_d">Sie wählen Ihren Kandidaten. Arbeitsvertrag wird ausgestellt. Alle Behördenschritte beginnen sofort.</div><div class="step-dur" data-i18n="step4_dur">Sofort</div></div>
+      <div class="step-cell fade-up"><div class="step-n">5</div><div class="step-title" data-i18n="step5_t">Visa & Anerkennung</div><div class="step-text" data-i18n="step5_d">Wir koordinieren das vollständige Visumverfahren. Unser Immigrationsanwalt begleitet komplexe Fälle.</div><div class="step-dur" data-i18n="step5_dur">8–12 Wochen</div></div>
+      <div class="step-cell fade-up"><div class="step-n">6</div><div class="step-title" data-i18n="step6_t">Ankunft & 1. Arbeitstag</div><div class="step-text" data-i18n="step6_d">Ihr Mitarbeiter kommt in NRW an — vollständig betreut. Anmeldung, Versicherung, Bank.</div><div class="step-dur" data-i18n="step6_dur">Gesamtdauer: 14–20 Wochen</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ROI CALCULATOR -->
+<section class="roi" id="roi">
+  <div class="container">
+    <span class="sec-label" data-i18n="roi_label">ROI-Rechner</span>
+    <h2 class="sec-title" data-i18n="roi_title">Was kostet Sie der Fachkräftemangel wirklich?</h2>
+    <p class="sec-sub" data-i18n="roi_sub">Berechnen Sie Ihre Ersparnis — auf Basis Ihrer eigenen Zahlen. Kein Verkaufsgespräch, nur Mathematik.</p>
+    <div class="roi-inner">
+      <div class="roi-controls">
+        <div class="roi-control">
+          <label>
+            <span class="rc-name" data-i18n="roi_c1">Bruttomonatsgehalt der Stelle</span>
+            <span class="rc-val" id="salaryOut">€2.500 / Monat</span>
+          </label>
+          <input type="range" min="1500" max="4000" value="2500" step="50" id="salarySlider" oninput="calcRoi()">
+          <div class="roi-note" data-i18n="roi_note2">30% Arbeitgeberanteil · 3 Jahre Gesamtkosten</div>
+        </div>
+        <div class="roi-control">
+          <label>
+            <span class="rc-name" data-i18n="roi_c2">Ihr aktueller Zeitarbeit-Stundensatz</span>
+            <span class="rc-val" id="hourlyOut">€36 / Std.</span>
+          </label>
+          <input type="range" min="28" max="50" value="36" step="1" id="hourlySlider" oninput="calcRoi()">
+          <div class="roi-note" data-i18n="roi_note1">40 Std./Woche · 52 Wochen · 3 Jahre</div>
+        </div>
+        <!-- Visual comparison bar -->
+        <div style="margin-top:2rem;background:var(--white);border:1px solid var(--divider);border-radius:var(--r);padding:1.5rem">
+          <div style="font-size:.78rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:1rem" data-i18n="roi_b1">Zeitarbeit über 3 Jahre</div>
+          <div style="position:relative;height:10px;background:var(--divider);border-radius:5px;margin-bottom:.5rem">
+            <div id="barZeit" style="position:absolute;left:0;top:0;height:100%;background:#C8213F;border-radius:5px;width:100%;transition:width .4s"></div>
+          </div>
+          <div style="font-size:.78rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin:.75rem 0 .5rem" data-i18n="roi_b2">EuroDoot Direktanstellung (3 J.)</div>
+          <div style="position:relative;height:10px;background:var(--divider);border-radius:5px">
+            <div id="barEuro" style="position:absolute;left:0;top:0;height:100%;background:var(--green);border-radius:5px;width:60%;transition:width .4s"></div>
+          </div>
+        </div>
+      </div>
+      <div class="roi-results">
+        <div class="roi-card alt">
+          <span class="roi-badge" data-i18n="roi_b1">Zeitarbeit über 3 Jahre</span>
+          <span class="roi-amount" id="zeitCost">€224.640</span>
+          <div class="roi-desc" data-i18n="roi_d1">Gesamtkosten bei Ihrem Stundensatz</div>
+        </div>
+        <div class="roi-card alt">
+          <span class="roi-badge" data-i18n="roi_b2">EuroDoot Direktanstellung (3 J.)</span>
+          <span class="roi-amount" id="euroCost">€123.250</span>
+          <div class="roi-desc" data-i18n="roi_d2">Provision + Gehalt + Arbeitgeberanteil</div>
+        </div>
+        <div class="roi-card saving">
+          <span class="roi-badge" data-i18n="roi_b3">Ihre Ersparnis</span>
+          <span class="roi-amount" id="savingAmt">€101.390</span>
+          <div class="roi-desc" data-i18n="roi_d3">Pro Mitarbeiter. Für immer.</div>
+        </div>
+        <div style="font-size:.75rem;color:var(--muted);line-height:1.6;padding:.75rem">Alle Angaben sind Schätzungen. Arbeitgeberanteil 30 %. Keine Rechts- oder Steuerberatung.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY EURODOOT -->
+<section class="why" id="why">
+  <div class="container">
+    <span class="sec-label" data-i18n="why_label">Warum EuroDoot</span>
+    <h2 class="sec-title" data-i18n="why_title">NRW. Logistik. Sonst nichts.</h2>
+    <p class="sec-sub" data-i18n="why_sub">Wir machen nicht alles für alle. Wir kennen diesen Markt, diese Region und diese Kandidaten besser als jeder Generalist.</p>
+    <div class="why-grid">
+      <div class="why-card fade-up"><span class="why-icon">📍</span><div class="why-title" data-i18n="why1_t">NRW-Spezialisten</div><div class="why-text" data-i18n="why1_d">Wir leben und arbeiten in NRW. Wir kennen die Arbeitgeber, die Behörden und die indische Community von über 50.000 Menschen — persönlich.</div></div>
+      <div class="why-card fade-up"><span class="why-icon">🚛</span><div class="why-title" data-i18n="why2_t">Nur Logistik</div><div class="why-text" data-i18n="why2_d">Ein Sektor, maximale Tiefe. Von der Lagerfachkraft bis zur Ausbildung — wir wissen, was Logistikbetriebe brauchen.</div></div>
+      <div class="why-card fade-up"><span class="why-icon">✅</span><div class="why-title" data-i18n="why3_t">Selbst erlebt</div><div class="why-text" data-i18n="why3_d">Unser Gründungsteam hat Inder selbst eingestellt, nach Deutschland geholt und durch jede Behörde begleitet. Kein Theorieprojekt.</div></div>
+      <div class="why-card fade-up"><span class="why-icon">⚖️</span><div class="why-title" data-i18n="why4_t">Immigrationsrecht</div><div class="why-text" data-i18n="why4_d">Wir arbeiten mit einem qualifizierten Immigrationsanwalt zusammen — für komplexe Visa-Fälle und rechtliche Sicherheit für beide Seiten.</div></div>
+      <div class="why-card fade-up"><span class="why-icon">🛡️</span><div class="why-title" data-i18n="why5_t">3 Monate Garantie</div><div class="why-text" data-i18n="why5_d">Verlässt ein Kandidat innerhalb der ersten 3 Monate, stellen wir kostenfrei einen Ersatzkandidaten. Ohne Wenn und Aber.</div></div>
+      <div class="why-card fade-up"><span class="why-icon">🤝</span><div class="why-title" data-i18n="why6_t">Direktanstellung</div><div class="why-text" data-i18n="why6_d">Keine Zeitarbeit, kein AÜG — Ihre neuen Mitarbeiter sind von Anfang an fest in Ihrem Betrieb. Das schafft Loyalität auf beiden Seiten.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CANDIDATES -->
+<section class="candidates" id="candidates">
+  <div class="container">
+    <span class="sec-label" data-i18n="cand_label">Unsere Kandidaten</span>
+    <h2 class="sec-title" data-i18n="cand_title">Wer kommt zu Ihnen — und warum es funktioniert</h2>
+    <p class="sec-sub" data-i18n="cand_sub">Kein anonymer CV-Service. Jeder Kandidat ist persönlich geprüft, vorbereitet und motiviert.</p>
+    <div class="cand-wrap">
+      <div class="cand-table-wrap fade-up">
+        <table>
+          <thead><tr><th data-i18n="ct_col1">Kriterium</th><th data-i18n="ct_col2">Standard</th><th data-i18n="ct_col3">Ihr Vorteil</th></tr></thead>
+          <tbody>
+            <tr id="cr1"><td>Ausbildung</td><td>Mind. 10+2 (Realschule), ITI oder Diplom</td><td class="good">Qualifizierte Basis</td></tr>
+            <tr id="cr2"><td>Alter</td><td>22–35 Jahre</td><td class="good">Langfristige Bindung wahrscheinlich</td></tr>
+            <tr id="cr3"><td>Deutschkenntnisse</td><td>A1 zertifiziert vor Ankunft</td><td class="good">Kommunikation ab Tag 1</td></tr>
+            <tr id="cr4"><td>Hintergrundprüfung</td><td>Polizeiliches Führungszeugnis, Gesundheitscheck, Zeugniskontrolle</td><td class="good">Keine Überraschungen nach der Einreise</td></tr>
+            <tr id="cr5"><td>Motivation</td><td>Persönliches Interview + Videovita auf Englisch</td><td class="good">Nur echte Freiwillige mit Lebensziel</td></tr>
+            <tr id="cr6"><td>Krankenstand</td><td>~5 Tage/Jahr</td><td class="good">13 Extra-Arbeitstage vs. Durchschnitt</td></tr>
+            <tr id="cr7"><td>NRW-Community</td><td>>50.000 Inder bereits in NRW</td><td class="good">Integration von Anfang an erleichtert</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <div class="legal-panel fade-up">
+          <div class="lp-title" data-i18n="legal_title">Rechtlicher Rahmen — wir managen alles</div>
+          <div class="lp-item"><div class="lp-name" data-i18n="lp1_n">Fachkräfteeinwanderungsgesetz (FEG)</div><div class="lp-desc" data-i18n="lp1_d">Ermöglicht seit 2020 die gezielte Zuwanderung aus Drittstaaten. Logistikberufe sind ausdrücklich eingeschlossen.</div></div>
+          <div class="lp-item"><div class="lp-name" data-i18n="lp2_n">Chancenkarte (§ 20a AufenthG)</div><div class="lp-desc" data-i18n="lp2_d">Seit 2024 können qualifizierte Bewerber zur Jobsuche einreisen — der Prozess wurde erheblich beschleunigt.</div></div>
+          <div class="lp-item"><div class="lp-name" data-i18n="lp3_n">Anerkennungsverfahren IHK / HWK</div><div class="lp-desc" data-i18n="lp3_d">Wir koordinieren die Anerkennung indischer Berufsabschlüsse mit der zuständigen Stelle.</div></div>
+          <div class="lp-item"><div class="lp-name" data-i18n="lp4_n">Direktanstellung — kein AÜG</div><div class="lp-desc" data-i18n="lp4_d">Ihre neuen Mitarbeiter sind direkt bei Ihnen angestellt. Volle Rechte, keine Zeitarbeitsbeschränkungen.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team" id="team">
+  <div class="container">
+    <span class="sec-label" data-i18n="team_label">Das Team</span>
+    <h2 class="sec-title" data-i18n="team_title">Professionals auf beiden Seiten — für jeden Schritt</h2>
+    <p class="sec-sub" data-i18n="team_sub">EuroDoot ist kein Ein-Mann-Projekt. Wir haben erfahrene Fachleute, die jeden Aspekt der Vermittlung abdecken — in Deutschland und in Indien.</p>
+    <div class="team-grid">
+      <!-- DE TEAM -->
+      <div class="team-side fade-up">
+        <div class="team-header de">
+          <div class="team-flag" data-i18n="team_de">🇩🇪</div>
+          <div class="th-text">
+            <h3 data-i18n="team_de_h">Deutschland-Team — NRW</h3>
+            <p data-i18n="team_de_sub">Arbeitgeber-Beziehungen, Visa, Compliance, Integration</p>
+          </div>
+        </div>
+        <div class="team-body" style="background:var(--dark)">
+          <div class="team-member" style="border-color:rgba(255,255,255,.08)">
+            <div class="tm-avatar" style="background:#8B1A3A">SS</div>
+            <div><div class="tm-name" style="color:#fff" data-i18n="m1_name">Sameer Saran</div><div class="tm-role" data-i18n="m1_role">Geschäftsleitung, Deutschland</div><div class="tm-desc" style="color:rgba(255,255,255,.45)" data-i18n="m1_desc">Gründer & Geschäftsführer. Betreibt Saran Capital Holdings UG in NRW, hat Mitarbeiter aus Indien eingestellt, integriert und durch jede Behörde begleitet.</div></div>
+          </div>
+          <div class="team-member" style="border-color:rgba(255,255,255,.08)">
+            <div class="tm-avatar" style="background:#1E3A8A">ZS</div>
+            <div><div class="tm-name" style="color:#fff" data-i18n="m2_name">Zanda Strode</div><div class="tm-role" data-i18n="m2_role">Vertriebsleitung, Deutschland</div><div class="tm-desc" style="color:rgba(255,255,255,.45)" data-i18n="m2_desc">Verantwortlich für Kundenbeziehungen und Auftragsmanagement mit deutschen Logistikunternehmen in NRW.</div></div>
+          </div>
+          <div class="team-member" style="border-color:rgba(255,255,255,.08)">
+            <div class="tm-avatar" style="background:#374151">KS</div>
+            <div><div class="tm-name" style="color:#fff" data-i18n="m3_name">Kristine Sveta</div><div class="tm-role" data-i18n="m3_role">Industry Advisor, Logistik</div><div class="tm-desc" style="color:rgba(255,255,255,.45)" data-i18n="m3_desc">Bringt tiefes Insiderwissen aus der Logistikbranche ein — kennt die Betriebe, die Anforderungen und die tägliche Realität in Lagern in NRW.</div></div>
+          </div>
+          <div class="team-member" style="border-bottom:none;border-color:rgba(255,255,255,.08)">
+            <div class="tm-avatar" style="background:#4C1D95">IS</div>
+            <div><div class="tm-name" style="color:#fff" data-i18n="m4_name">Ieva Strode</div><div class="tm-role" data-i18n="m4_role">HR & Compliance</div><div class="tm-desc" style="color:rgba(255,255,255,.45)" data-i18n="m4_desc">Kennt das deutsche HR-Compliance-Umfeld: Agentur für Arbeit, Aufenthaltsgesetz, Arbeitsrecht und die spezifischen Pflichten bei der Beschäftigung von Drittstaatsangehörigen.</div></div>
+          </div>
+        </div>
+      </div>
+      <!-- IN TEAM -->
+      <div class="team-side fade-up">
+        <div class="team-header in">
+          <div class="team-flag" data-i18n="team_in">🇮🇳</div>
+          <div class="th-text">
+            <h3 data-i18n="team_in_h">Indien-Team — Delhi</h3>
+            <p data-i18n="team_in_sub">Sourcing, Screening, Vorbereitung, Begleitung</p>
+          </div>
+        </div>
+        <div class="team-body">
+          <div class="team-member">
+            <div class="tm-avatar" style="background:#065F46">SC</div>
+            <div><div class="tm-name" data-i18n="m5_name">Sanchit Saran</div><div class="tm-role" data-i18n="m5_role">Geschäftsleitung, Indien</div><div class="tm-desc" data-i18n="m5_desc">16 Jahre Branchenerfahrung. Leitet das Sourcing-Netzwerk in Indien und koordiniert mit seinem Team die vollständige Kandidatenvorbereitung von Delhi aus.</div></div>
+          </div>
+          <div class="team-member" style="border-bottom:none">
+            <div class="tm-avatar" style="background:#92400E">SK</div>
+            <div><div class="tm-name" data-i18n="m6_name">Soni Kumari</div><div class="tm-role" data-i18n="m6_role">Back Office</div><div class="tm-desc" data-i18n="m6_desc">Verantwortlich für Dokumentenmanagement, Koordination mit Behörden und administrativen Support für alle laufenden Vermittlungsvorgänge.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <span class="sec-label" data-i18n="contact_label">Kontakt</span>
+    <h2 class="sec-title" data-i18n="contact_title">Sprechen wir.</h2>
+    <p class="sec-sub" data-i18n="contact_sub">Senden Sie uns Ihre Stellenanforderung — wir antworten innerhalb von 24 Stunden mit einem konkreten Vorschlag.</p>
+    <div class="contact-grid">
+      <div class="contact-form-wrap fade-up">
+        <div class="cf-head">
+          <h3 data-i18n="cf_h3">Stelle melden</h3>
+          <p data-i18n="cf_p">Kein Verkaufsgespräch — einfach Bedarf schildern, wir kümmern uns um den Rest.</p>
+        </div>
+        <div class="cf-body">
+          <div class="form-2col">
+            <div class="form-row"><label data-i18n="fl_company">Unternehmen *</label><input type="text" data-i18n-ph="fl_company"></div>
+            <div class="form-row"><label data-i18n="fl_contact">Ansprechpartner *</label><input type="text" data-i18n-ph="fl_contact"></div>
+          </div>
+          <div class="form-2col">
+            <div class="form-row"><label data-i18n="fl_email">E-Mail *</label><input type="email" placeholder="kontakt@firma.de"></div>
+            <div class="form-row"><label data-i18n="fl_phone">Telefon</label><input type="tel" placeholder="+49 ..."></div>
+          </div>
+          <div class="form-row">
+            <label data-i18n="fl_type">Art der Stelle *</label>
+            <select>
+              <option data-i18n="fl_type_opt0">Ausbildungsplatz</option>
+              <option data-i18n="fl_type_opt1">Vollzeit-Stelle (Direktanstellung)</option>
+              <option data-i18n="fl_type_opt2">Mehrere Stellen</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label data-i18n="fl_msg">Ihre Anforderungen & Wünsche</label>
+            <textarea data-i18n-ph="fl_msg_ph" placeholder="Stelle, Qualifikationsanforderungen, gewünschter Starttermin, Anzahl der Kandidaten..."></textarea>
+          </div>
+          <button class="form-submit" onclick="submitForm()" data-i18n="fl_submit">Anfrage absenden →</button>
+          <p class="form-note" data-i18n="fl_note">Antwort innerhalb von 24 Stunden · Keine Weiterleitung an Dritte · Kein Spam</p>
+        </div>
+      </div>
+      <div class="contact-info">
+        <div class="ci-card fade-up">
+          <div class="ci-title" data-i18n="ci_title">Ihre direkten Ansprechpartner</div>
+          <div class="ci-person">
+            <div class="ci-avatar" style="background:#8B1A3A">SS</div>
+            <div><div class="ci-name">Sameer Saran</div><div class="ci-role" data-i18n="m1_role">Geschäftsleitung, Deutschland</div></div>
+          </div>
+          <div class="ci-person">
+            <div class="ci-avatar" style="background:#1E3A8A">ZS</div>
+            <div><div class="ci-name">Zanda Strode</div><div class="ci-role" data-i18n="m2_role">Vertriebsleitung, Deutschland</div></div>
+          </div>
+          <div style="margin-top:.75rem;padding-top:.75rem;border-top:1px solid var(--divider)">
+            <div class="ci-title" data-i18n="ci_title2">Direkt erreichen</div>
+            <div class="ci-item">📞 <a href="tel:+4915204084556" data-i18n="ci_phone">+49 152 04084556</a></div>
+            <div class="ci-item">✉️ <a href="mailto:eurodoot.de@gmail.com" data-i18n="ci_email">eurodoot.de@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="next-steps fade-up">
+          <div class="ns-title" data-i18n="ns_title">Was als Nächstes passiert</div>
+          <div class="ns-step"><div class="ns-n">1</div><div class="ns-text" data-i18n="ns1">Wir antworten innerhalb von 24 Stunden</div></div>
+          <div class="ns-step"><div class="ns-n">2</div><div class="ns-text" data-i18n="ns2">Kurzes Telefonat (30 Min.) zur Abstimmung</div></div>
+          <div class="ns-step"><div class="ns-n">3</div><div class="ns-text" data-i18n="ns3">Erste Kandidatenprofile in 2–3 Wochen</div></div>
+          <div class="ns-step"><div class="ns-n">4</div><div class="ns-text" data-i18n="ns4">Videointerviews mit Ihrem Team</div></div>
+          <div class="ns-step"><div class="ns-n">5</div><div class="ns-text" data-i18n="ns5">Vertragsschluss & Start</div></div>
+        </div>
+        <div class="guarantee-strip fade-up">
+          <span class="gs-icon">🛡️</span>
+          <span class="gs-text" data-i18n="guarantee">Kostenlose Nachbesetzung innerhalb von 3 Monaten, falls ein Kandidat vor Ablauf der Probezeit ausscheidet.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER / IMPRESSUM -->
+<div class="impressum">
+  <div class="imp-inner">
+    <div class="imp-grid">
+      <div class="imp-col">
+        <h4 data-i18n="imp_nav">Navigation</h4>
+        <a href="#solution" data-i18n-arr="imp_links,0">Unsere Lösung</a>
+        <a href="#process" data-i18n-arr="imp_links,1">Ablauf</a>
+        <a href="#roi" data-i18n-arr="imp_links,2">ROI-Rechner</a>
+        <a href="#team" data-i18n-arr="imp_links,3">Team</a>
+        <a href="#contact" data-i18n-arr="imp_links,4">Kontakt</a>
+      </div>
+      <div class="imp-col">
+        <h4 data-i18n="imp_legal">Rechtliches</h4>
+        <a href="#" onclick="openLegal('impressum');return false" data-i18n-arr="imp_legal_links,0">Impressum</a>
+        <a href="#" onclick="openLegal('datenschutz');return false" data-i18n-arr="imp_legal_links,1">Datenschutz</a>
+      </div>
+      <div class="imp-col">
+        <h4 data-i18n="imp_contact_h">Kontakt</h4>
+        <a href="mailto:eurodoot.de@gmail.com">eurodoot.de@gmail.com</a>
+        <a href="tel:+4915204084556">+49 152 04084556</a>
+        <a href="https://eurodoot.in" target="_blank">eurodoot.in (Kandidaten)</a>
+      </div>
+      <div class="imp-col">
+        <h4 data-i18n="imp_company_h">Unternehmen</h4>
+        <p>Saran Capital Holdings UG</p>
+        <p>Boschstraße 16</p>
+        <p>47533 Kleve</p>
+        <p>HRB 18563 · AG Kleve</p>
+        <p>USt-IdNr.: DE358683746</p>
+      </div>
+    </div>
+    <div class="imp-bottom">
+      <p class="imp-copy" data-i18n="imp_copy">© 2025 EuroDoot</p>
+      <p class="imp-parent"><span data-i18n="imp_parent">Eine Marke der</span> <strong>Saran Capital Holdings UG</strong> · Kleve, Deutschland</p>
+    </div>
+  </div>
+</div>
+
+<!-- LEGAL MODALS -->
+<div class="legal-overlay" id="legalOverlay" onclick="closeLegal(event)">
+  <div class="legal-modal">
+    <div class="lm-head">
+      <h3 id="legalTitle">Impressum</h3>
+      <button class="lm-close" onclick="closeLegalBtn()">×</button>
+    </div>
+    <div class="lm-body" id="legalBody"></div>
+  </div>
+</div>
+
+<script>
+// ── ROI CALCULATOR ──────────────────────────────────
+function fmt(n) {
+  return '€' + Math.round(n).toLocaleString('de-DE');
+}
+
+function calcRoi() {
+  const salary  = parseInt(document.getElementById('salarySlider').value);
+  const hourly  = parseInt(document.getElementById('hourlySlider').value);
+
+  const l = T[lang];
+  document.getElementById('salaryOut').textContent = '€' + salary.toLocaleString('de-DE') + ' / ' + (lang==='de' ? 'Monat' : 'month');
+  document.getElementById('hourlyOut').textContent = '€' + hourly + ' / ' + (lang==='de' ? 'Std.' : 'hr');
+
+  const zeitarbeit = hourly * 40 * 52 * 3;
+  const fee        = Math.min(8000, Math.max(3000, Math.round(salary * 2.5)));
+  const direkt     = Math.round(salary * 1.30 * 12 * 3);
+  const eurodoot   = fee + direkt;
+  const saving     = Math.max(0, zeitarbeit - eurodoot);
+
+  document.getElementById('zeitCost').textContent  = fmt(zeitarbeit);
+  document.getElementById('euroCost').textContent  = fmt(eurodoot);
+  document.getElementById('savingAmt').textContent = fmt(saving);
+
+  // Update bars
+  const maxVal = Math.max(zeitarbeit, eurodoot);
+  document.getElementById('barZeit').style.width = '100%';
+  document.getElementById('barEuro').style.width = Math.round((eurodoot / maxVal) * 100) + '%';
+}
+
+// ── FORM SUBMIT (WhatsApp fallback) ─────────────────
+function submitForm() {
+  const company  = document.querySelector('[data-label="company"] input, input[type=text]');
+  const msg = (lang === 'de')
+    ? 'Guten Tag, ich möchte eine Stelle bei EuroDoot melden. Bitte nehmen Sie Kontakt auf.'
+    : 'Hello, I would like to submit a vacancy to EuroDoot. Please get in touch.';
+  window.open('https://wa.me/4915204084556?text=' + encodeURIComponent(msg), '_blank');
+}
+
+// ── LEGAL MODALS ─────────────────────────────────────
+function openLegal(which) {
+  const t = T[lang];
+  document.getElementById('legalTitle').textContent  = t[which + '_title'];
+  document.getElementById('legalBody').innerHTML     = t[which + '_body'];
+  document.getElementById('legalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLegalBtn() {
+  document.getElementById('legalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function closeLegal(e) {
+  if (e.target.id === 'legalOverlay') closeLegalBtn();
+}
+
+// ── SCROLL ANIMATIONS ────────────────────────────────
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// ── INIT ─────────────────────────────────────────────
+calcRoi();
+applyLang('de');
+
+// Handle footer array links
+document.querySelectorAll('[data-i18n-arr]').forEach(el => {
+  const [key, idx] = el.getAttribute('data-i18n-arr').split(',');
+  // These are handled separately in applyLang override below
+});
+
+// Extend applyLang for array items
+const _origApply = applyLang;
+applyLang = function(l) {
+  _origApply(l);
+  const t = T[l];
+  document.querySelectorAll('[data-i18n-arr]').forEach(el => {
+    const [key, idx] = el.getAttribute('data-i18n-arr').split(',');
+    if(t[key] && t[key][parseInt(idx)] !== undefined) el.textContent = t[key][parseInt(idx)];
+  });
+  // Re-run ROI display strings
+  calcRoi();
+};
+applyLang('de');
+</script>
+</body>
+</html>
